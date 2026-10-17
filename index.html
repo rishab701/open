@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff3f6">
+<title>Arpita ♡</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --ink:#493b4a;--muted:#7d6c7b;--rose:#b9748e;--rose2:#c77e98;--line:#ecd3dd;
+  --serif:"Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);color:var(--ink);line-height:1.7;overflow-x:hidden;
+  background:linear-gradient(145deg,#fff9f6 0%,#fff2f6 44%,#f7f0fb 100%);background-attachment:fixed;
+  padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);
+}
+.glow{position:fixed;border-radius:50%;pointer-events:none;z-index:-1;opacity:.55}
+.g1{width:330px;height:330px;background:#f7dce5;top:12%;left:-190px}
+.g2{width:390px;height:390px;background:#e9def7;right:-230px;top:48%}
+.petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.petal{position:absolute;top:-30px;color:#d59bb0;opacity:.55;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(240deg);opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-9px) rotate(4deg)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+section{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:84px 22px;text-align:center}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+h2{font-size:clamp(32px,7vw,50px);margin:14px 0 30px}
+h2 em,h1 em{color:var(--rose2);font-weight:500}
+.kicker{font-size:11px;letter-spacing:.2em;font-weight:700;color:#ad7a91;text-transform:uppercase}
+.intro{color:var(--muted);font-size:15px;max-width:460px;margin:-14px auto 28px}
+
+.btn{
+  display:inline-flex;align-items:center;gap:12px;border:0;border-radius:999px;cursor:pointer;
+  padding:15px 26px;min-height:48px;background:var(--rose);color:#fff;font:600 14px var(--sans);
+  box-shadow:0 9px 22px #b9748e40;transition:transform .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+:is(.btn,button,a):focus-visible{outline:3px solid var(--rose2);outline-offset:3px}
+
+/* hero */
+#home{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding-top:calc(60px + env(safe-area-inset-top));padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+.art{height:150px;width:210px;position:relative;display:grid;place-items:center;margin-bottom:10px}
+.sun{position:absolute;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,#fff7d8 0%,#fce7df 54%,rgba(250,225,235,0) 73%);animation:breathe 4s ease-in-out infinite}
+.env{width:100px;height:70px;background:#f4cbd7;border-radius:10px;position:relative;transform:rotate(-5deg);
+  box-shadow:0 14px 35px #c9829d40;display:grid;place-items:center;color:#a85e7b;font-size:26px}
+.env:before{content:"";position:absolute;inset:0;border-radius:10px;
+  background:linear-gradient(140deg,transparent 49%,#e8b4c5 50%) left/50% 100% no-repeat,
+             linear-gradient(220deg,transparent 49%,#f9dbe3 50%) right/50% 100% no-repeat}
+.env span{position:relative;background:#f7d8e2;border-radius:50%;width:36px;height:36px;display:grid;place-items:center}
+.fl{position:absolute;color:#d69ab0;animation:float 4s ease-in-out infinite}
+.f1{left:14px;top:26px;font-size:38px}.f2{right:8px;bottom:16px;font-size:28px;animation-delay:-1.5s}
+.f3{right:30px;top:8px;font-size:22px;color:var(--rose2);animation-delay:-.8s}
+h1{font-size:clamp(46px,14vw,84px);margin:10px 0 18px}
+.sub{font-size:clamp(16px,4.4vw,19px);color:#6f5f6e;max-width:30ch}
+.soft{font-family:var(--serif);font-style:italic;color:#ad7c91;margin:10px 0 28px;font-size:17px}
+.hint{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom));font-size:10px;letter-spacing:.2em;color:#b69baa}
+
+/* note */
+.note{position:relative;text-align:left;background:rgba(255,255,255,.75);border:1px solid #fff;border-radius:10px;
+  padding:clamp(28px,6vw,56px);max-width:680px;margin:0 auto;box-shadow:0 20px 70px #8c63751f}
+.note:before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:5px;pointer-events:none}
+.note h2{margin:6px 0 20px;position:relative}
+.note p{font-size:15px;color:#6f606e;margin-bottom:14px;position:relative}
+.note .sign{font-family:var(--serif);font-style:italic;color:#a46c83;font-size:18px;margin:22px 0 0}
+
+/* reminders */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:left}
+.rc{padding:24px 20px;background:rgba(255,255,255,.65);border:1px solid #fff;border-radius:16px;transition:transform .25s}
+.rc:hover{transform:translateY(-4px)}
+.rc i{font-style:normal;font-size:26px;display:block;margin-bottom:14px}
+.rc h3{font-size:19px;margin-bottom:8px}.rc p{font-size:13px;color:var(--muted);line-height:1.75}
+
+/* letters */
+.letters{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-align:left;
+  min-height:150px;padding:22px 20px;background:rgba(255,255,255,.7);border:1px solid #fff;border-radius:16px;
+  color:var(--ink);font:500 14px var(--sans);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.lc:hover{transform:translateY(-4px);box-shadow:0 14px 30px #9d71831f}
+.lc b{font-size:30px;font-weight:400}.lc span{max-width:150px}
+.lc:after{content:"↗";position:absolute;right:16px;bottom:14px;color:var(--rose2);font-size:18px}
+.lres{position:relative;margin:24px auto 0;max-width:600px;padding:34px 28px;background:#fffafc;border:1px solid var(--line);
+  border-radius:18px;box-shadow:0 14px 35px #9d718318;animation:appear .35s ease}
+.lres[hidden]{display:none}
+.lres .ic{font-size:30px;margin-bottom:8px}.lres h3{font-size:26px;margin-bottom:12px}
+.lres p{color:var(--muted);font-size:15px;max-width:460px;margin:0 auto}
+.x{position:absolute;right:10px;top:8px;border:0;background:none;color:#a88b9b;font-size:28px;cursor:pointer;padding:6px 12px}
+
+/* thought */
+.flowers{display:flex;justify-content:center;gap:16px;font-size:28px;margin-bottom:22px}
+.flowers span{animation:float 3s ease-in-out infinite}
+.flowers span:nth-child(2){animation-delay:-.7s}.flowers span:nth-child(3){animation-delay:-1.4s}
+.flowers span:nth-child(4){animation-delay:-2s}
+#out{max-width:480px;min-height:60px;margin:24px auto 0;padding:16px 20px;border:1px dashed #ddb8c7;border-radius:14px;
+  color:#a56f86;font:italic 18px/1.6 var(--serif)}
+
+/* final */
+.final{background:rgba(255,255,255,.5);border-top:1px solid #fff;max-width:none}
+.final .heart{font-size:36px;color:var(--rose2);animation:breathe 3s infinite}
+.final h2{margin:12px 0 16px;font-size:clamp(30px,6vw,40px)}
+.final p{max-width:560px;margin:0 auto 22px;color:var(--muted);font-size:15px}
+.back{display:inline-block;margin-top:10px;font-size:12px;color:#a98295;border-bottom:1px solid #e0c4d0;padding-bottom:3px;text-decoration:none}
+footer{position:relative;z-index:1;text-align:center;padding:18px 10px calc(26px + env(safe-area-inset-bottom));color:#b49eac;font-size:12px}
+
+@media(max-width:760px){
+  section{padding:68px 18px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:11px}
+  .rc{padding:18px 15px}.rc h3{font-size:17px}
+  .letters{grid-template-columns:1fr;gap:10px}
+  .lc{flex-direction:row;align-items:center;min-height:84px;padding:16px 18px}
+  .lc span{max-width:none}.lc:after{bottom:auto;top:50%;transform:translateY(-50%)}
+}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="petals" aria-hidden="true"></div>
+
+<section id="home">
+  <div class="art" aria-hidden="true">
+    <div class="sun"></div><div class="fl f1">✿</div><div class="fl f2">✿</div><div class="fl f3">♡</div>
+    <div class="env"><span>♡</span></div>
+  </div>
+  <div class="kicker">✦ a gentle reminder ✦</div>
+  <h1>Hey, <em>Arpita.</em></h1>
+  <p class="sub">Here's a little corner of the world where nothing is expected of you.</p>
+  <p class="soft">No need to smile. No need to explain. Just be. ♡</p>
+  <a class="btn" href="#note" style="text-decoration:none">Come on in ↓</a>
+  <div class="hint">TAKE YOUR TIME · THERE'S NO RUSH</div>
+</section>
+
+<section id="note">
+  <div class="kicker">A note for you</div>
+  <div class="note" style="margin-top:22px">
+    <h2>You don't have to<br><em>be okay</em> right now.</h2>
+    <p>I don't know exactly what today has felt like for you, and you don't have to tell me. You don't have to carry every feeling neatly, find the right words, or pretend everything is fine.</p>
+    <p>If all you can do today is rest, breathe and get through the day slowly, that's enough. You're allowed to have hard days, quiet days, and days when you need the world to be a little softer.</p>
+    <p class="sign">I'm in your corner. Always cheering for you. ♡</p>
+  </div>
+</section>
+
+<section id="reminders">
+  <div class="kicker">In case you need a reminder</div>
+  <h2>Little things that are<br><em>still true.</em></h2>
+  <div class="grid">
+    <article class="rc"><i>☁️</i><h3>You can pause.</h3><p>You don't have to figure everything out tonight. One breath, one moment at a time.</p></article>
+    <article class="rc"><i>🌷</i><h3>Your feelings matter.</h3><p>You don't need to justify being upset. What you feel deserves gentleness.</p></article>
+    <article class="rc"><i>🫶</i><h3>You are not a burden.</h3><p>You don't have to be cheerful or entertaining to deserve care and kindness.</p></article>
+    <article class="rc"><i>🌙</i><h3>This will pass.</h3><p>Take your time. You don't have to rush yourself into feeling better.</p></article>
+  </div>
+</section>
+
+<section id="letters">
+  <div class="kicker">Open whenever you feel like it</div>
+  <h2>Little letters,<br><em>just for you.</em></h2>
+  <p class="intro">Pick one, or save them for another day. There's no wrong way to be here.</p>
+  <div class="letters">
+    <button class="lc" data-k="sad"><b>🧸</b><span>when today feels heavy</span></button>
+    <button class="lc" data-k="smile"><b>🌼</b><span>for a tiny smile</span></button>
+    <button class="lc" data-k="quiet"><b>🌙</b><span>when you need quiet</span></button>
+  </div>
+  <div class="lres" id="lres" hidden>
+    <button class="x" id="lx" aria-label="Close letter">×</button>
+    <div class="ic" id="lic"></div><h3 id="lt"></h3><p id="ltx"></p>
+  </div>
+</section>
+
+<section id="soft">
+  <div class="flowers" aria-hidden="true"><span>🌷</span><span>🌼</span><span>🌸</span><span>🌻</span></div>
+  <div class="kicker">A very small happiness machine</div>
+  <h2>Need a little<br><em>something soft?</em></h2>
+  <p class="intro">Tap the button for one tiny kind thought.</p>
+  <button class="btn" id="tb">Send me a little thought ✧</button>
+  <div id="out" aria-live="polite">Your tiny reminder will appear here ♡</div>
+</section>
+
+<section class="final">
+  <div class="heart">♡</div>
+  <h2>One last thing...</h2>
+  <p>You never owe anyone a reply, an explanation, or a happy version of yourself. Take all the space you need. This page will be here whenever you want a reminder that you are cared about, exactly as you are, Arpita.</p>
+  <a class="back" href="#home">back to the beginning ↑</a>
+</section>
+
+<footer>be gentle with yourself today <span style="color:var(--rose2)">♡</span></footer>
+
+<script>
+/* ===== EDIT HERE: change any text you like ===== */
+const letters = {
+  sad:{icon:"🧸",title:"For the days that feel heavy",
+    text:"Hey Arpita. You don't have to turn a difficult day into a good one, and you don't have to explain your feelings perfectly. Get comfy, drink a little water if you can, and let yourself take up space. You matter on your low days just as much as on your bright ones. Sending you the gentlest hug, no reply needed. ♡"},
+  smile:{icon:"🌼",title:"A tiny pocket-sized smile",
+    text:"Official reminder: somewhere in the world, a little flower is growing without knowing how pretty it is. That's a lot like you. 🌼 Your tiny assignment: unclench your jaw, relax your shoulders, and remember you are someone's favourite laugh and favourite kind of human. (And yes, you can come back and read this twice.)"},
+  quiet:{icon:"🌙",title:"It's okay to be quiet",
+    text:"You don't need to reply to this page, or to anyone, right now. Quiet doesn't make you unkind, and needing space doesn't make you difficult. Take the time you need in whatever way feels safe and gentle. You'll still be cared about tomorrow, and the day after that. No timer, no pressure. ♡"}
+};
+const thoughts = [
+  "You deserve softness, especially from yourself. ♡",
+  "You don't have to solve the whole day. Just live this one moment.",
+  "Somewhere, someone is grateful that you exist. 🌷",
+  "Rest is allowed. Quiet is allowed. You are allowed.",
+  "You are more than whatever made today hard. ✨",
+  "A slow day is still a day you made it through.",
+  "You can start again gently, whenever you're ready. 🌼",
+  "You deserve the same kindness you give everyone else.",
+  "No pressure to bloom today. Even flowers have their seasons. 🌸"
+];
+/* =============================================== */
+
+const $ = id => document.getElementById(id);
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const box = $("lres");
+
+document.querySelectorAll("[data-k]").forEach(b => b.addEventListener("click", () => {
+  const l = letters[b.dataset.k];
+  $("lic").textContent = l.icon; $("lt").textContent = l.title; $("ltx").textContent = l.text;
+  box.hidden = false;
+  box.scrollIntoView({behavior: calm ? "auto" : "smooth", block: "center"});
+}));
+$("lx").addEventListener("click", () => box.hidden = true);
+document.addEventListener("keydown", e => { if(e.key === "Escape") box.hidden = true; });
+
+let last = -1;
+$("tb").addEventListener("click", () => {
+  let i; do { i = Math.floor(Math.random() * thoughts.length); } while(i === last);
+  last = i;
+  const o = $("out"); o.textContent = thoughts[i];
+  if(o.animate) o.animate([{opacity:.3,transform:"translateY(4px)"},{opacity:1,transform:"none"}],{duration:350,easing:"ease-out"});
+});
+
+if(!calm){
+  const layer = document.querySelector(".petals"), sym = ["✧","·","♡","✿"];
+  for(let i = 0; i < 13; i++){
+    const p = document.createElement("span");
+    p.className = "petal"; p.textContent = sym[i % 4];
+    p.style.left = ((i * 37 + 11) % 100) + "%";
+    p.style.animationDuration = (13 + (i % 7) * 2) + "s";
+    p.style.animationDelay = -(i * 1.7) + "s";
+    p.style.fontSize = (10 + (i % 4) * 4) + "px";
+    layer.appendChild(p);
+  }
+}
+</script>
+</body>
+</html>
