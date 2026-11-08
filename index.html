@@ -3,516 +3,760 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fff7e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#2a1a26" media="(prefers-color-scheme: dark)">
-<meta name="format-detection" content="telephone=no">
-<title>Good morning, Arpita ☀️</title>
+<title>Happy Diwali!</title>
+<script>
+  document.documentElement.classList.add('js');
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('reduce');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Yatra+One&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme:light;
-  --bg:#fff1f4;--bg-top:#fff7e8;--bg-bottom:#f3eafc;
-  --ink:#4a2f45;--ink-soft:#64485f;--muted:#7f6479;
-  --accent:#b45d7e;--accent-hand:#ad5578;--on-accent:#ffffff;
-  --paper:#fffdfb;--paper-edge:#f1dde5;
-  --shadow:rgba(74,47,69,.13);
-  --n1:#ffe3d6;--n2:#fff1bd;--n3:#ece2fb;--n4:#dff3e8;--note-ink:#4a2f45;
-  --sun1:#fff6cf;--sun2:#ffd59a;--ray:#ffe0a0;
-  --cup:#fffdfb;--cup-line:#e2afc2;--chai:#c98e66;--saucer:#f6d6e1;
-  --cloud:#ffffff;--steam:#d391ab;
-  --tape:rgba(232,165,192,.5);
-  --glow-a:#ffe7c4;--glow-b:#f8d4e1;--glow-c:#e6dcfa;
-  --serif:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
-  --hand:"Caveat","Bradley Hand","Segoe Print",cursive;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#1d1420;--bg-top:#2a1a26;--bg-bottom:#1a1628;
-    --ink:#f7e8f0;--ink-soft:#ead6e1;--muted:#c7aebe;
-    --accent:#eea0bc;--accent-hand:#f3aecb;--on-accent:#2b1424;
-    --paper:#2a1d29;--paper-edge:#433042;
-    --shadow:rgba(0,0,0,.4);
-    --n1:#4a2f33;--n2:#463d26;--n3:#342c4c;--n4:#253f37;--note-ink:#f7e8f0;
-    --sun1:#ffe4a8;--sun2:#ef9f80;--ray:#e9b27c;
-    --cup:#f4e5ec;--cup-line:#c9879f;--chai:#a8714d;--saucer:#4f3649;
-    --cloud:#5a4358;--steam:#e7a9c1;
-    --tape:rgba(238,160,188,.28);
-    --glow-a:#3a2a24;--glow-b:#3b2035;--glow-c:#262044;
+  :root {
+    color-scheme: light;
+    --bg: #FBEAF0;
+    --ink: #2A1238;
+    --ink-soft: #5E3D69;
+    --title: #8E0F55;
+    --title-glow: none;
+    --gold: #A8660F;
+    --marigold: #E8730C;
+    --magenta: #B0136A;
+    --sindoor: #C21F33;
+    --teal: #1E7F72;
+    --glow: rgba(232, 115, 12, .22);
+    --focus: #6A2C91;
+    --display: "Yatra One", Georgia, "Times New Roman", serif;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#1d1420;--bg-top:#2a1a26;--bg-bottom:#1a1628;
-  --ink:#f7e8f0;--ink-soft:#ead6e1;--muted:#c7aebe;
-  --accent:#eea0bc;--accent-hand:#f3aecb;--on-accent:#2b1424;
-  --paper:#2a1d29;--paper-edge:#433042;
-  --shadow:rgba(0,0,0,.4);
-  --n1:#4a2f33;--n2:#463d26;--n3:#342c4c;--n4:#253f37;--note-ink:#f7e8f0;
-  --sun1:#ffe4a8;--sun2:#ef9f80;--ray:#e9b27c;
-  --cup:#f4e5ec;--cup-line:#c9879f;--chai:#a8714d;--saucer:#4f3649;
-  --cloud:#5a4358;--steam:#e7a9c1;
-  --tape:rgba(238,160,188,.28);
-  --glow-a:#3a2a24;--glow-b:#3b2035;--glow-c:#262044;
-}
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #140A24;
+      --ink: #F7E7C6;
+      --ink-soft: #CDB59A;
+      --title: #F6B93B;
+      --title-glow: 0 0 32px rgba(246, 185, 59, .35);
+      --gold: #F6B93B;
+      --marigold: #FF8A1F;
+      --magenta: #E0368E;
+      --sindoor: #E8475A;
+      --teal: #5CC8B4;
+      --glow: rgba(246, 185, 59, .30);
+      --focus: #FFD27A;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #140A24;
+    --ink: #F7E7C6;
+    --ink-soft: #CDB59A;
+    --title: #F6B93B;
+    --title-glow: 0 0 32px rgba(246, 185, 59, .35);
+    --gold: #F6B93B;
+    --marigold: #FF8A1F;
+    --magenta: #E0368E;
+    --sindoor: #E8475A;
+    --teal: #5CC8B4;
+    --glow: rgba(246, 185, 59, .30);
+    --focus: #FFD27A;
+  }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--bg);overflow-x:hidden}
-body{
-  min-height:100%;background:var(--bg);color:var(--ink);
-  font-family:var(--serif);font-size:17px;line-height:1.75;
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;
-  padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px);
-}
-button{font:inherit;color:inherit;background:none;border:0;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-a{color:inherit;-webkit-tap-highlight-color:transparent}
-:is(a,button):focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+  *, *::before, *::after { box-sizing: inherit; }
+  html {
+    background: var(--bg);
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+  html:not(.js) .needs-js { display: none; }
+  .reduce .needs-motion { display: none; }
 
-/* background: a fixed layer instead of background-attachment:fixed, which iOS Safari ignores */
-.sky{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;
-  background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg) 42%,var(--bg-bottom) 100%)}
-.glow{position:absolute;border-radius:50%}
-.ga{width:440px;height:440px;top:-170px;left:50%;margin-left:-220px;background:radial-gradient(circle,var(--glow-a) 0%,transparent 68%)}
-.gb{width:360px;height:360px;top:38%;left:-200px;background:radial-gradient(circle,var(--glow-b) 0%,transparent 68%)}
-.gc{width:400px;height:400px;bottom:-150px;right:-200px;background:radial-gradient(circle,var(--glow-c) 0%,transparent 68%)}
-main{position:relative;z-index:1}
-.fx{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
-.spark{position:absolute;width:24px;height:24px;line-height:24px;text-align:center;font-size:18px;color:var(--accent)}
+  #sky, #fireworks { position: fixed; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+  #sky { z-index: 0; }
+  #fireworks { z-index: 30; }
+  .page { position: relative; z-index: 1; }
 
-/* ---------- hero ---------- */
-.hero{
-  position:relative;max-width:720px;margin:0 auto;text-align:center;
-  min-height:100vh;
-  min-height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:36px 22px 76px;
-}
-.art{width:min(230px,62vw);height:auto;overflow:visible;margin-bottom:4px}
-.s1{stop-color:var(--sun1)}.s2{stop-color:var(--sun2)}
-.rays{fill:none;stroke:var(--ray);stroke-width:9;stroke-linecap:round;stroke-dasharray:5 24.06}
-.sun{fill:url(#sunG)}
-.cloud{fill:var(--cloud)}
-.cup{fill:var(--cup);stroke:var(--cup-line);stroke-width:2}
-.handle{fill:none;stroke:var(--cup-line);stroke-width:7;stroke-linecap:round}
-.chai{fill:var(--chai)}
-.saucer{fill:var(--saucer)}
-.cupheart,.tinyheart{fill:var(--accent)}
-.steam{fill:none;stroke:var(--steam);stroke-width:3.5;stroke-linecap:round;opacity:.75;animation:steam 3.4s ease-in-out infinite}
-.st2{animation-delay:-1.1s}.st3{animation-delay:-2.2s}
-.sunwrap{animation:sunrise 1.9s cubic-bezier(.2,.7,.2,1) both}
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 96px 20px 56px;
+    text-align: center;
+  }
+  .toran { position: absolute; top: 0; left: 0; width: 100%; height: 76px; overflow: visible; }
+  .hero-stage {
+    position: relative;
+    width: min(84vw, 430px);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+  }
+  .rangoli {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: .92;
+    transition: transform 1.8s cubic-bezier(.16, 1, .3, 1) .1s, opacity 1.2s ease .1s;
+  }
+  .js body:not(.is-lit) .rangoli { transform: scale(.3) rotate(-60deg); opacity: 0; }
+  .rangoli-spin { transform-origin: 200px 200px; }
+  .is-lit .rangoli-spin { animation: spin 160s linear 2s infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .rg-a { fill: var(--magenta); }
+  .rg-b { fill: var(--marigold); }
+  .rg-c { fill: var(--sindoor); }
+  .rg-d { fill: var(--gold); }
+  .rg-e { fill: var(--teal); }
+  .rg-ring { fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: .7; }
+  .rg-dots { fill: none; stroke: var(--gold); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 0 15; }
 
-.date{font-family:var(--hand);font-size:24px;line-height:1.2;color:var(--accent-hand);margin-bottom:6px}
-h1{font-weight:400;line-height:1}
-.h1a{display:block;font-size:clamp(38px,10.4vw,68px);letter-spacing:-.025em}
-.h1b{display:block;font-family:var(--hand);font-weight:700;font-size:clamp(66px,18vw,112px);line-height:.9;color:var(--accent);margin-top:4px}
-.h1b::after{
-  content:"";display:block;width:72%;height:12px;margin:0 auto;background:var(--accent);opacity:.5;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'%3E%3Cpath d='M3 9 C40 3 75 3 104 8 S165 13 197 5' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'%3E%3Cpath d='M3 9 C40 3 75 3 104 8 S165 13 197 5' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;
-}
-.sub{max-width:26em;margin:20px auto 8px;color:var(--ink-soft);font-size:clamp(17px,4.5vw,19px);line-height:1.6}
-.when{max-width:22em;margin:0 auto 26px;font-family:var(--hand);font-size:23px;line-height:1.3;color:var(--muted)}
-.hint{position:absolute;left:0;right:0;bottom:18px;font-family:var(--hand);font-size:20px;color:var(--muted);opacity:.85}
+  .hero-glow {
+    position: absolute; inset: 10%;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, var(--glow), transparent);
+    opacity: 1;
+    transition: opacity 1.4s ease .2s;
+    pointer-events: none;
+  }
+  .js body:not(.is-lit) .hero-glow { opacity: 0; }
 
-.seq{animation:fadeup .9s ease both}
-.d1{animation-delay:.7s}.d2{animation-delay:.9s}.d3{animation-delay:1.1s}.d4{animation-delay:1.3s}.d5{animation-delay:1.5s}.d6{animation-delay:2s}
+  .hero-diya { position: relative; z-index: 2; width: 36%; }
+  .hero-diya::before {
+    content: "";
+    position: absolute; left: 50%; top: 56%;
+    width: 128%; aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 1.5px dashed var(--gold);
+    transform: translate(-50%, -50%);
+    animation: ring 2.8s ease-in-out infinite;
+    pointer-events: none;
+    transition: opacity .4s ease;
+  }
+  .hero-diya.lit::before, html:not(.js) .hero-diya::before { opacity: 0; animation: none; }
+  @keyframes ring {
+    0%, 100% { transform: translate(-50%, -50%) scale(.92); opacity: .3; }
+    50% { transform: translate(-50%, -50%) scale(1.04); opacity: .8; }
+  }
+  .hero-prompt {
+    position: absolute; left: 0; right: 0; bottom: 5%;
+    margin: 0;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink-soft);
+    transition: opacity .3s ease, visibility 0s linear .3s;
+  }
+  .is-lit .hero-prompt { opacity: 0; visibility: hidden; }
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 28px;
-  border-radius:999px;background:var(--accent);color:var(--on-accent);
-  font:600 16px/1.2 var(--serif);text-decoration:none;box-shadow:0 10px 24px var(--shadow);transition:transform .18s ease
-}
-.btn:active{transform:scale(.97)}
+  .hero-reveal { margin-top: .25rem; transition: opacity 1s ease .8s, transform 1.1s cubic-bezier(.16, 1, .3, 1) .8s; }
+  .js body:not(.is-lit) .hero-reveal { opacity: 0; transform: translateY(12px); visibility: hidden; }
+  .hero-title {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 10.5vw, 5.2rem);
+    line-height: 1.05;
+    color: var(--title);
+    text-shadow: var(--title-glow);
+  }
+  .hero-title .line { display: block; }
+  .hero-sub {
+    margin: .6rem 0 1.6rem;
+    font-style: italic;
+    font-size: clamp(1.25rem, 3.6vw, 1.5rem);
+    color: var(--ink-soft);
+  }
+  .scroll-cue {
+    display: inline-flex; align-items: center; gap: .35em;
+    font-weight: 600; font-size: 1.15rem;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: .25em;
+    border-radius: 6px;
+  }
+  .scroll-cue svg { width: .9em; height: .9em; }
 
-/* ---------- sections ---------- */
-.sec{max-width:880px;margin:0 auto;padding:76px 20px;text-align:center}
-.sec h2{font-weight:400;font-size:clamp(30px,7.4vw,46px);line-height:1.12;letter-spacing:-.02em;margin-bottom:14px}
-.lede{max-width:27em;margin:0 auto 32px;color:var(--muted);font-size:17px;line-height:1.65}
+  /* ---------- Diya ---------- */
+  .diya-btn {
+    appearance: none; -webkit-appearance: none;
+    background: none; border: 0; margin: 0; padding: 0;
+    color: inherit; cursor: pointer;
+    border-radius: 18px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .diya { display: block; width: 100%; height: auto; overflow: visible; transition: transform .25s ease, filter .6s ease; }
+  .diya-btn:not(.lit) .diya { filter: saturate(.72) brightness(.92); }
+  html:not(.js) .diya-btn .diya { filter: none; }
+  .diya .flame {
+    transform-box: fill-box; transform-origin: 50% 100%;
+    transform: scale(.15); opacity: 0;
+    transition: transform .55s cubic-bezier(.34, 1.56, .64, 1), opacity .2s ease;
+  }
+  .diya .flicker { transform-box: fill-box; transform-origin: 50% 100%; }
+  .diya .halo { opacity: 0; transition: opacity .9s ease; }
+  .lit .diya .flame, html:not(.js) .diya .flame { transform: scale(1); opacity: 1; }
+  .lit .diya .halo, html:not(.js) .diya .halo { opacity: 1; }
+  .lit .diya .halo { animation: halo 2.6s ease-in-out infinite alternate; }
+  .lit .diya .flicker { animation: flicker 1.8s ease-in-out infinite; animation-delay: var(--fd, 0s); }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1, 1) skewX(0deg); }
+    22% { transform: scale(.97, 1.04) skewX(1.6deg); }
+    48% { transform: scale(1.02, .97) skewX(-1.2deg); }
+    74% { transform: scale(.98, 1.03) skewX(2deg); }
+  }
+  @keyframes halo { from { opacity: .7; } to { opacity: 1; } }
 
-/* morning note */
-.paper{
-  position:relative;max-width:620px;margin:0 auto;text-align:left;
-  background:var(--paper);border:1px solid var(--paper-edge);border-radius:6px;
-  padding:clamp(36px,8vw,58px) clamp(22px,6.5vw,54px) clamp(28px,6vw,44px);
-  box-shadow:0 2px 0 var(--paper-edge),0 24px 50px var(--shadow);
-}
-.tape{position:absolute;top:-13px;left:50%;width:120px;height:28px;margin-left:-60px;background:var(--tape);transform:rotate(-3deg);border-radius:2px}
-.sec .paper h2{text-align:left;font-size:clamp(28px,7vw,40px);line-height:1.15;margin-bottom:18px}
-.paper p{color:var(--ink-soft);margin-bottom:16px}
-.paper strong{font-weight:600;color:var(--ink)}
-.sign{font-family:var(--hand);font-size:31px;line-height:1.2;color:var(--accent-hand);margin-top:20px}
-.paper .sign{margin-bottom:0;color:var(--accent-hand)}
+  /* ---------- Sections ---------- */
+  .section { padding: clamp(64px, 10vw, 112px) 22px; }
+  .section-inner { max-width: 34rem; margin: 0 auto; }
+  .divider { display: flex; justify-content: center; }
+  .divider svg { display: block; width: 132px; height: auto; }
+  .dv-dot { fill: var(--marigold); }
+  .dv-petal { fill: var(--magenta); }
+  .dv-core { fill: var(--gold); }
 
-/* promise sticky notes */
-.notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px;max-width:640px;margin:0 auto;text-align:left}
-.sn{position:relative;padding:26px 20px 22px;background:var(--n1);color:var(--note-ink);
-  border-radius:3px 3px 20px 3px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 12px 22px var(--shadow);transform:rotate(-1.6deg)}
-.sn:nth-child(2){background:var(--n2);transform:rotate(1.2deg)}
-.sn:nth-child(3){background:var(--n3);transform:rotate(1.4deg)}
-.sn:nth-child(4){background:var(--n4);transform:rotate(-1.1deg)}
-.pin{position:absolute;top:-8px;left:50%;margin-left:-8px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 2px 3px var(--shadow)}
-.sn h3{font-family:var(--hand);font-weight:700;font-size:28px;line-height:1.1;margin-bottom:8px}
-.sn p{font-size:15.5px;line-height:1.6;opacity:.88}
-.vow{max-width:16em;margin:46px auto 0;font-family:var(--hand);font-weight:700;font-size:clamp(34px,9vw,48px);line-height:1.12;color:var(--accent)}
+  h2 {
+    margin: 0 0 .45em;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    line-height: 1.15;
+    color: var(--title);
+    text-shadow: var(--title-glow);
+    text-wrap: balance;
+  }
 
-/* missions */
-.list{list-style:none;max-width:520px;margin:0 auto;padding:8px 10px;text-align:left;
-  background:var(--paper);border:1px solid var(--paper-edge);border-radius:20px;box-shadow:0 18px 40px var(--shadow)}
-.list li+li{border-top:1px dashed var(--paper-edge)}
-.mi{width:100%;display:flex;align-items:center;gap:14px;min-height:62px;padding:12px;text-align:left;font-size:17px;line-height:1.35;border-radius:14px}
-.box{flex:none;position:relative;width:28px;height:28px;border:2px solid var(--accent);border-radius:8px}
-.mi[aria-pressed="true"] .box::after{content:"";position:absolute;left:7px;top:-8px;width:11px;height:22px;border:solid var(--accent);border-width:0 4px 4px 0;border-radius:2px;transform:rotate(40deg)}
-.mt{flex:1}
-.mi[aria-pressed="true"] .mt{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:2px;opacity:.6}
-.me{flex:none;font-size:22px}
-.meter{max-width:520px;height:10px;margin:26px auto 12px;border-radius:999px;background:var(--paper-edge);overflow:hidden}
-.meter span{display:block;height:100%;width:0;border-radius:inherit;background:var(--accent);transition:width .45s ease}
-.status{font-family:var(--hand);font-size:26px;line-height:1.3;color:var(--accent-hand)}
+  .letter p { margin: 0 0 1.05em; }
+  .letter p:last-child { margin-bottom: 0; }
+  .letter .salutation {
+    margin-bottom: .7em;
+    font-family: var(--display);
+    font-size: clamp(1.8rem, 5.5vw, 2.3rem);
+    line-height: 1.2;
+    color: var(--title);
+  }
 
-/* letters */
-.envs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:640px;margin:0 auto}
-.env{display:flex;align-items:center;gap:14px;min-height:80px;padding:16px 18px;text-align:left;
-  background:var(--paper);border:1px solid var(--paper-edge);border-radius:14px;font-size:16.5px;line-height:1.35;
-  box-shadow:0 10px 24px var(--shadow);transition:transform .18s ease,border-color .2s}
-.env:active{transform:scale(.98)}
-.env[aria-expanded="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent),0 10px 24px var(--shadow)}
-.seal{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:22px;background:var(--n1)}
-.env:nth-child(2) .seal{background:var(--n2)}.env:nth-child(3) .seal{background:var(--n3)}.env:nth-child(4) .seal{background:var(--n4)}
-.letter{position:relative;max-width:600px;margin:22px auto 0;padding:40px clamp(22px,6vw,44px) 30px;text-align:left;
-  background:var(--paper);border:1px solid var(--paper-edge);border-radius:6px;box-shadow:0 22px 46px var(--shadow);
-  animation:unfold .4s cubic-bezier(.2,.7,.2,1)}
-.letter[hidden]{display:none}
-.letter h3{font-family:var(--hand);font-weight:700;font-size:34px;line-height:1.1;color:var(--accent);margin-bottom:12px;padding-right:36px}
-.letter p{color:var(--ink-soft)}
-.letter .sign{font-size:28px;margin-top:14px}
-.close{position:absolute;right:6px;top:6px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:28px;line-height:1;color:var(--muted)}
+  .diyas, .finale { text-align: center; }
+  .diyas .section-inner, .finale .section-inner { max-width: 38rem; }
+  .lede { margin: 0 auto 2.2rem; max-width: 28rem; color: var(--ink-soft); }
+  .diya-row { display: flex; justify-content: center; align-items: flex-end; gap: clamp(4px, 2.6vw, 22px); }
+  .row-diya { position: relative; width: clamp(54px, 15vw, 96px); padding: 4px; }
+  .row-diya::after {
+    content: "";
+    position: absolute; left: 50%; bottom: -12px;
+    width: 6px; height: 6px; margin-left: -3px;
+    border-radius: 50%;
+    background: var(--marigold);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+  .row-diya.is-current::after { opacity: 1; }
+  @media (hover: hover) { .row-diya:not(.lit):hover .diya { transform: translateY(-4px); } }
+  .count { margin: 1.8rem 0 0; min-height: 1.7em; font-style: italic; font-size: 1.1rem; color: var(--ink-soft); }
+  .poem-panel { min-height: 13rem; display: grid; place-items: center; padding: 1.25rem .25rem 0; }
+  .poem {
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 4.6vw, 1.85rem);
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+  .poem-line { display: block; animation: lineIn .8s cubic-bezier(.16, 1, .3, 1) both; animation-delay: var(--d, 0ms); }
+  @keyframes lineIn { from { opacity: 0; transform: translateY(8px); } }
+  .poem-empty { margin: 0; font-style: italic; color: var(--ink-soft); }
+  .poem-source { list-style: none; margin: 2rem 0 0; padding: 0; font-style: italic; font-weight: 600; font-size: 1.4rem; line-height: 1.45; }
+  .poem-source li { margin-bottom: 2.2rem; }
+  .poem-source span { display: block; }
+  .js .poem-source { display: none; }
 
-/* emergency kit */
-.kit{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(20px,6vw,40px)}
-.round{width:142px;height:142px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
-  background:var(--n1);color:var(--note-ink);box-shadow:0 16px 34px var(--shadow);
-  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none;transition:transform .18s ease}
-.round.alt{background:var(--n2)}
-.round:active{transform:scale(.94)}
-.round.pop{animation:pop .45s ease}
-.big{font-size:52px;line-height:1}
-.lbl{font-size:15px;font-weight:600;line-height:1.2}
-.say{max-width:460px;min-height:96px;margin:32px auto 0;padding:18px 22px;border:1.5px dashed var(--accent);border-radius:18px;
-  display:grid;place-items:center;font-family:var(--hand);font-size:27px;line-height:1.25;color:var(--accent-hand)}
-.count{min-height:1.5em;margin-top:10px;font-size:14px;color:var(--muted)}
+  .finale .divider { margin-bottom: clamp(48px, 8vw, 72px); }
+  .js body:not(.finale-on) .finale { display: none; }
+  .finale-on .finale .section-inner { animation: rise 1.1s cubic-bezier(.16, 1, .3, 1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+  .closing {
+    margin: 1.4rem 0 2rem;
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 5.4vw, 2.2rem);
+    line-height: 1.35;
+    color: var(--title);
+    text-shadow: var(--title-glow);
+    text-wrap: balance;
+  }
+  .closing span { display: block; }
+  .closing span + span { margin-top: .35em; }
+  .wish { margin: 0 auto 2rem; max-width: 30rem; }
+  .sign { margin: 0 0 2.6rem; font-style: italic; color: var(--ink-soft); }
+  .sign-name {
+    display: block;
+    margin-top: .2rem;
+    font-family: var(--display);
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .btn {
+    appearance: none; -webkit-appearance: none;
+    font: inherit; font-weight: 600; font-size: 1.2rem; line-height: 1.2;
+    padding: .75em 1.5em;
+    border: 1.5px solid var(--gold);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color .2s ease, color .2s ease;
+  }
+  @media (hover: hover) { .btn:hover { background: var(--gold); color: var(--bg); } }
+  .hint { margin: 1rem 0 0; font-style: italic; font-size: 1.05rem; color: var(--ink-soft); }
 
-/* ending */
-.band{position:relative;background:var(--paper);border-top:1px solid var(--paper-edge)}
-.heart{font-size:40px;line-height:1;color:var(--accent);margin-bottom:12px}
-.closing{max-width:30em;margin:0 auto;color:var(--ink-soft);font-size:18px}
-.again{display:inline-block;margin-top:24px;padding:12px 4px;font-size:15px;color:var(--muted);text-underline-offset:5px;text-decoration-color:var(--paper-edge)}
-.foot{padding:0 16px 30px;text-align:center;font-family:var(--hand);font-size:21px;color:var(--muted)}
-
-@keyframes sunrise{from{transform:translateY(34px);opacity:0}to{transform:none;opacity:1}}
-@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-@keyframes steam{0%{opacity:0;transform:translateY(6px)}35%{opacity:.85}100%{opacity:0;transform:translateY(-12px)}}
-@keyframes pop{0%{transform:scale(1)}35%{transform:scale(.86)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
-@keyframes unfold{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-
-@media (hover:hover){
-  .btn:hover{transform:translateY(-2px)}
-  .env:hover{transform:translateY(-2px)}
-  .round:hover{transform:translateY(-3px)}
-}
-@media (max-width:600px){
-  .sec{padding:62px 18px}
-  .envs{grid-template-columns:1fr}
-}
-@media (max-width:480px){
-  .notes{gap:24px 14px}
-  .sn{padding:24px 15px 18px}
-  .sn h3{font-size:25px}
-  .sn p{font-size:15px}
-}
-@media (max-width:340px){.notes{grid-template-columns:1fr}}
-@media (max-height:640px){.hint{display:none}}
-@media (orientation:landscape) and (max-height:520px){
-  .art{width:150px}
-  .hero{padding-top:24px;padding-bottom:36px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-}
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
+      transition-duration: .001ms !important;
+      transition-delay: 0ms !important;
+    }
+  }
 </style>
 </head>
 <body>
-<div class="sky" aria-hidden="true"><div class="glow ga"></div><div class="glow gb"></div><div class="glow gc"></div></div>
-<div class="fx" id="fx" aria-hidden="true"></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+<canvas id="fireworks" aria-hidden="true"></canvas>
 
-<main>
-  <header class="hero" id="home">
-    <svg class="art" viewBox="0 0 240 190" aria-hidden="true" focusable="false">
-      <defs>
-        <radialGradient id="sunG" cx="50%" cy="45%" r="55%">
-          <stop offset="0%" class="s1"/>
-          <stop offset="100%" class="s2"/>
-        </radialGradient>
-      </defs>
-      <g class="sunwrap">
-        <circle class="rays" cx="120" cy="88" r="74"/>
-        <circle class="sun" cx="120" cy="88" r="56"/>
-      </g>
-      <g class="cloud"><ellipse cx="38" cy="80" rx="24" ry="10"/><circle cx="30" cy="74" r="10"/><circle cx="44" cy="70" r="13"/></g>
-      <g class="cloud"><ellipse cx="204" cy="48" rx="22" ry="9"/><circle cx="197" cy="43" r="9"/><circle cx="210" cy="39" r="11"/></g>
-      <path class="steam" d="M104 100 C97 89 111 82 104 70"/>
-      <path class="steam st2" d="M120 98 C113 85 127 78 120 64"/>
-      <path class="steam st3" d="M136 100 C129 89 143 82 136 70"/>
-      <path class="tinyheart" d="M120 56 C111 50 109 44 113 41.5 C116 40 119 41.5 120 44 C121 41.5 124 40 127 41.5 C131 44 129 50 120 56 Z"/>
-      <ellipse class="saucer" cx="120" cy="170" rx="72" ry="11"/>
-      <path class="handle" d="M166 122 C192 120 192 152 160 152"/>
-      <path class="cup" d="M72 112 H168 V122 C168 150 150 166 120 166 C90 166 72 150 72 122 Z"/>
-      <ellipse class="cup" cx="120" cy="112" rx="48" ry="8"/>
-      <ellipse class="chai" cx="120" cy="113" rx="42" ry="5"/>
-      <path class="cupheart" d="M120 148 C108 140 105 132 111 128.5 C115 126.5 118.5 128 120 131.5 C121.5 128 125 126.5 129 128.5 C135 132 132 140 120 148 Z"/>
-    </svg>
+<div class="page">
+  <header class="hero">
+    <svg class="toran" id="toran" aria-hidden="true" focusable="false"></svg>
 
-    <p class="date seq d1" id="today">a brand new day</p>
-    <h1 class="seq d2"><span class="h1a">Good morning,</span><span class="h1b">Arpita</span></h1>
-    <p class="sub seq d3">I hope you slept a little better, and that today is softer on you than yesterday was.</p>
-    <p class="when seq d4" id="when">Rise slowly. There’s no rush today ☀️</p>
-    <a class="btn seq d5" href="#note">Read your morning note</a>
-    <p class="hint seq d6" aria-hidden="true">scroll slowly, no rush ♡</p>
+    <div class="hero-stage">
+      <svg class="rangoli" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><g class="rangoli-spin" id="rangoliSpin"></g></svg>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <button class="diya-btn hero-diya" id="heroDiya" type="button" aria-label="Light the diya">
+        <svg class="diya" viewBox="0 0 120 126" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="fl-h" cx="50%" cy="72%" r="70%">
+              <stop offset="0" stop-color="#FFFBEA"/><stop offset=".35" stop-color="#FFE27D"/><stop offset=".72" stop-color="#FF9B22"/><stop offset="1" stop-color="#E5481B"/>
+            </radialGradient>
+            <radialGradient id="ha-h">
+              <stop offset="0" stop-color="#FFC95A" stop-opacity=".6"/><stop offset="1" stop-color="#FF9B22" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="cl-h" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#D47A43"/><stop offset=".55" stop-color="#A84A24"/><stop offset="1" stop-color="#6E2C13"/>
+            </linearGradient>
+          </defs>
+          <circle class="halo" cx="60" cy="54" r="50" fill="url(#ha-h)"/>
+          <g class="flame"><g class="flicker">
+            <path d="M60 12C66 28 77 39 75 54C73 67 67 73 60 73C53 73 47 67 45 54C43 39 54 28 60 12Z" fill="url(#fl-h)"/>
+            <path d="M60 40C63 48 67 54 66 61C65 67 62 70 60 70C58 70 55 67 54 61C53 54 57 48 60 40Z" fill="#FFFDF4" opacity=".9"/>
+          </g></g>
+          <path d="M60 73V81" stroke="#3B2416" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M46 112H74L70 122H50Z" fill="#6E2C13"/>
+          <path d="M12 80C30 77 90 77 108 80C106 100 87 114 60 114C33 114 14 100 12 80Z" fill="url(#cl-h)"/>
+          <ellipse cx="60" cy="80.5" rx="48" ry="5.5" fill="#5A2410"/>
+          <ellipse cx="60" cy="80" rx="40" ry="3" fill="#E9A23B" opacity=".55"/>
+          <path d="M22 88C40 95 80 95 98 88" fill="none" stroke="#F4C25B" stroke-width="1.4" opacity=".7"/>
+          <g fill="#F4C25B"><circle cx="30" cy="96" r="2.2"/><circle cx="42" cy="100" r="2.2"/><circle cx="54" cy="102" r="2.2"/><circle cx="66" cy="102" r="2.2"/><circle cx="78" cy="100" r="2.2"/><circle cx="90" cy="96" r="2.2"/></g>
+        </svg>
+      </button>
+      <p class="hero-prompt needs-js">Tap the diya to light it</p>
+    </div>
+
+    <div class="hero-reveal">
+      <h1 class="hero-title"><span class="line">Happy Diwali,</span><span class="line"><span data-to>Bestie</span>!</span></h1>
+      <p class="hero-sub">Our first Diwali as friends, and a little light sent your way.</p>
+      <a class="scroll-cue" href="#letter">Read your letter<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
   </header>
 
-  <section class="sec" id="note">
-    <article class="paper">
-      <span class="tape" aria-hidden="true"></span>
-      <h2>Before the day begins…</h2>
-      <p>I know yesterday wasn’t easy, and I’ve been thinking about you since. I hope you woke up feeling even a tiny bit lighter. And if you didn’t, that’s completely okay too.</p>
-      <p>There’s no pressure to be “back to normal” this morning. Take it slow. Eat something, drink some water, rest whenever your body asks for it, and please don’t be hard on yourself.</p>
-      <p>Whatever today looks like, remember just one thing: <strong>you’re not doing it alone.</strong></p>
-      <p class="sign">Always in your corner ♡</p>
-    </article>
-  </section>
-
-  <section class="sec" id="promise">
-    <h2>I’m standing right beside you.</h2>
-    <p class="lede">Whatever kind of day this turns into, here’s exactly where you’ll find me.</p>
-    <div class="notes">
-      <article class="sn"><span class="pin" aria-hidden="true"></span><h3>On good days ☀️</h3><p>Right there, celebrating every little win with you. Loudly.</p></article>
-      <article class="sn"><span class="pin" aria-hidden="true"></span><h3>On heavy days 🌧️</h3><p>Sitting with you through it. No fixing, no lectures, just company.</p></article>
-      <article class="sn"><span class="pin" aria-hidden="true"></span><h3>On confusing days 🧩</h3><p>Figuring it out together, one small step at a time.</p></article>
-      <article class="sn"><span class="pin" aria-hidden="true"></span><h3>On quiet days 🌙</h3><p>No need to talk. I’ll just be here, close by.</p></article>
-    </div>
-    <p class="vow">I’ve got your back. Today, tomorrow, always ♡</p>
-  </section>
-
-  <section class="sec" id="missions">
-    <h2>Tiny morning missions</h2>
-    <p class="lede">No deadlines, no pressure. Tick them off whenever you get to them (or don’t, that’s fine too).</p>
-    <ul class="list">
-      <li><button type="button" class="mi" aria-pressed="false"><span class="box" aria-hidden="true"></span><span class="mt">Drink a glass of water</span><span class="me" aria-hidden="true">💧</span></button></li>
-      <li><button type="button" class="mi" aria-pressed="false"><span class="box" aria-hidden="true"></span><span class="mt">Eat something yummy (chai and biscuits count)</span><span class="me" aria-hidden="true">🍳</span></button></li>
-      <li><button type="button" class="mi" aria-pressed="false"><span class="box" aria-hidden="true"></span><span class="mt">Take three slow, deep breaths</span><span class="me" aria-hidden="true">🌬️</span></button></li>
-      <li><button type="button" class="mi" aria-pressed="false"><span class="box" aria-hidden="true"></span><span class="mt">Let a little sunlight in</span><span class="me" aria-hidden="true">🌤️</span></button></li>
-      <li><button type="button" class="mi" aria-pressed="false"><span class="box" aria-hidden="true"></span><span class="mt">Say one kind thing to yourself</span><span class="me" aria-hidden="true">💗</span></button></li>
-    </ul>
-    <div class="meter" aria-hidden="true"><span id="bar"></span></div>
-    <p class="status" id="status" aria-live="polite">Start whenever you’re ready ✿</p>
-  </section>
-
-  <section class="sec" id="letters">
-    <h2>Little letters, just for you</h2>
-    <p class="lede">Open one now or save them for later. There’s no wrong way to be here.</p>
-    <div class="envs">
-      <button type="button" class="env" data-k="heavy" aria-expanded="false" aria-controls="letter"><span class="seal" aria-hidden="true">🧸</span><span>if today still feels heavy</span></button>
-      <button type="button" class="env" data-k="smile" aria-expanded="false" aria-controls="letter"><span class="seal" aria-hidden="true">🌼</span><span>for a tiny smile</span></button>
-      <button type="button" class="env" data-k="here" aria-expanded="false" aria-controls="letter"><span class="seal" aria-hidden="true">🫶</span><span>in case you forget I’m here</span></button>
-      <button type="button" class="env" data-k="quiet" aria-expanded="false" aria-controls="letter"><span class="seal" aria-hidden="true">🌙</span><span>when you just want quiet</span></button>
-    </div>
-    <article class="letter" id="letter" hidden tabindex="-1">
-      <button type="button" class="close" id="close" aria-label="Close letter">×</button>
-      <h3 id="lt"></h3>
-      <p id="ltx"></p>
-      <p class="sign">♡</p>
-    </article>
-  </section>
-
-  <section class="sec" id="kit">
-    <h2>The emergency kit</h2>
-    <p class="lede">Open 24/7. Unlimited supply. Tap as many times as you like.</p>
-    <div class="kit">
-      <button type="button" class="round" id="hugBtn"><span class="big" aria-hidden="true">🤗</span><span class="lbl">Get a hug</span></button>
-      <button type="button" class="round alt" id="thoughtBtn"><span class="big" aria-hidden="true">☀️</span><span class="lbl">Get a kind thought</span></button>
-    </div>
-    <p class="say" id="say" aria-live="polite">Whatever you need, it’s right here ♡</p>
-    <p class="count" id="count"></p>
-  </section>
-
-  <div class="band">
-    <section class="sec" id="always">
-      <div class="heart" aria-hidden="true">♡</div>
-      <h2>One last thing…</h2>
-      <p class="closing">Whatever this day brings, good, hard, or somewhere in between, you don’t have to face it alone. I’m standing right here beside you, and I’ve got your back. Today, tomorrow, and every single day after that.</p>
-      <p class="sign">your bestie, always ♡</p>
-      <a class="again" href="#home">Read it again from the top</a>
+  <main>
+    <section class="section letter" id="letter" aria-label="A letter for you">
+      <div class="section-inner">
+        <p class="salutation">Dear <span data-to>Bestie</span>,</p>
+        <p>This is our first Diwali as friends, and honestly, it’s hard to believe we only started talking in January. It feels like I’ve known you for much longer than that.</p>
+        <p>Thank you for the late-night talks, the jokes that only make sense to us, and for showing up every time it mattered this year. You made this year a lot brighter than I expected.</p>
+        <p>So for our first Diwali, instead of forwarding a sparkly GIF on WhatsApp, I made you a small corner of the internet. Below are five diyas waiting for you. Light each one and it’ll hand you a few lines in Hinglish, the way we actually talk.</p>
+        <p>Here’s to the first of many. Happy Diwali, stay bright, stay you.</p>
+      </div>
     </section>
-    <p class="foot">made with a lot of care, just for you ☀️</p>
-  </div>
-</main>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 120 28" focusable="false">
+        <circle class="dv-dot" cx="22" cy="14" r="1.8"/><circle class="dv-dot" cx="32" cy="14" r="2.4"/><circle class="dv-dot" cx="43" cy="14" r="3"/>
+        <g class="dv-petal">
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5"/>
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(60 60 14)"/>
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(120 60 14)"/>
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(180 60 14)"/>
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(240 60 14)"/>
+          <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(300 60 14)"/>
+        </g>
+        <circle class="dv-core" cx="60" cy="14" r="3"/>
+        <circle class="dv-dot" cx="77" cy="14" r="3"/><circle class="dv-dot" cx="88" cy="14" r="2.4"/><circle class="dv-dot" cx="98" cy="14" r="1.8"/>
+      </svg>
+    </div>
+
+    <section class="section diyas" aria-labelledby="diyasTitle">
+      <div class="section-inner">
+        <h2 id="diyasTitle">Five diyas, five shayaris</h2>
+        <p class="lede needs-js">Tap a diya to light it. Tap a lit one again to reread its lines.</p>
+        <div class="diya-row needs-js" id="diyaRow" role="group" aria-label="Five diyas"></div>
+        <p class="count needs-js" id="count">0 of 5 diyas lit</p>
+        <div class="poem-panel needs-js" id="poemPanel" aria-live="polite">
+          <p class="poem-empty">Your first shayari is one tap away.</p>
+        </div>
+
+        <ol class="poem-source" id="poemSource">
+          <li>
+            <span>January mein shuru hui thi yeh kahaani,</span>
+            <span>Par lagta hai jaise pehchaan ho bahut puraani,</span>
+            <span>Pehli Diwali hai yeh hamari dosti ki,</span>
+            <span>Aur abhi toh baaki hai poori zindagaani.</span>
+          </li>
+          <li>
+            <span>Diye ki lau si hai yeh dosti hamari,</span>
+            <span>Andheron mein bhi dikhaye raahein saari,</span>
+            <span>Tu saath ho toh har raat lage Diwali,</span>
+            <span>Aur har subah lage thodi aur pyaari.</span>
+          </li>
+          <li>
+            <span>Patakhon ka shor ho ya mithai ki mithaas,</span>
+            <span>Sab adhoora sa lagta hai jab tu na ho paas,</span>
+            <span>Is Diwali bas itni si dua hai Rab se,</span>
+            <span>Kabhi kam na ho teri muskaan ka ehsaas.</span>
+          </li>
+          <li>
+            <span>Mithai ka dabba, aadha tera aadha mera,</span>
+            <span>Har hasi, har gham, aadha tera aadha mera,</span>
+            <span>Par is dosti mein kuch bhi aadha nahi yaar,</span>
+            <span>Yahan toh poora ka poora dil hai tera.</span>
+          </li>
+          <li>
+            <span>Har diya jo jale, tere naam ki dua bane,</span>
+            <span>Har roshni tere sapnon ka aasmaan bane,</span>
+            <span>Andhera kabhi na aaye teri raahon mein,</span>
+            <span>Teri har subah ek nayi Diwali bane.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section finale" id="finale" aria-labelledby="finaleTitle">
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 120 28" focusable="false">
+          <circle class="dv-dot" cx="22" cy="14" r="1.8"/><circle class="dv-dot" cx="32" cy="14" r="2.4"/><circle class="dv-dot" cx="43" cy="14" r="3"/>
+          <g class="dv-petal">
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5"/>
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(60 60 14)"/>
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(120 60 14)"/>
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(180 60 14)"/>
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(240 60 14)"/>
+            <ellipse cx="60" cy="8" rx="3.2" ry="5.5" transform="rotate(300 60 14)"/>
+          </g>
+          <circle class="dv-core" cx="60" cy="14" r="3"/>
+          <circle class="dv-dot" cx="77" cy="14" r="3"/><circle class="dv-dot" cx="88" cy="14" r="2.4"/><circle class="dv-dot" cx="98" cy="14" r="1.8"/>
+        </svg>
+      </div>
+      <div class="section-inner">
+        <h2 id="finaleTitle">All five diyas are lit</h2>
+        <blockquote class="closing">
+          <span>Duniya ke liye shayad bas ek tyohaar hai Diwali,</span>
+          <span>Mere liye toh tu hi roshni hai, tu hi meri Diwali.</span>
+        </blockquote>
+        <p class="wish">May this year bring you light that lasts long after the diyas burn out, sweetness that has nothing to do with mithai, and many more Diwalis like this one, together.</p>
+        <p class="sign">With love,<span class="sign-name" data-from>Rishab</span></p>
+        <button class="btn needs-js needs-motion" id="againBtn" type="button">Light up the sky again</button>
+        <p class="hint needs-js needs-motion">Or tap anywhere on the page for more fireworks.</p>
+      </div>
+    </section>
+  </main>
+</div>
 
 <script>
-/* ===== EDIT HERE: change any text you like ===== */
-const letters = {
-  heavy: { title: "🧸 If today still feels heavy",
-    text: "Hey Arpita. If today still feels heavy, that’s okay. You don’t have to turn it into a good day; you only have to get through it, gently. Lie down if you need to, drink some water, and let the day be small. You matter just as much on your low days as on your bright ones. Sending you the softest hug. No reply needed." },
-  smile: { title: "🌼 For a tiny smile",
-    text: "Official morning announcement: the world is a slightly better place because you woke up in it today. Your tiny assignment: unclench your jaw, drop your shoulders, and remember you’re someone’s favourite person to talk to. (Yes, you. Read that twice if you need to.)" },
-  here: { title: "🫶 In case you forget I’m here",
-    text: "I’m here. Not just on the easy days, but on the messy, tired, don’t-want-to-talk-about-it days too. Call, text, rant, or send one random emoji, and I’ll understand. You never have to go through anything alone while I’m around. I’ve got your back, always." },
-  quiet: { title: "🌙 When you just want quiet",
-    text: "You don’t have to reply to this, or to anyone, right now. Needing space doesn’t make you difficult, and being quiet doesn’t make you distant. Take all the time you need. I’ll still be right here whenever you’re ready." }
-};
-const thoughts = [
-  "Good morning to you, and only you ☀️",
-  "Today doesn’t have to be perfect to be a good day.",
-  "Slow mornings still count. You’re doing fine.",
-  "You’re allowed to start the day gently 🌷",
-  "Yesterday is done. Today gets a fresh page.",
-  "You’re so much stronger than you feel right now ✨",
-  "Drink some water. Yes, right now. I’m watching 💧",
-  "Somebody is really, really glad you exist. (It’s me.)",
-  "No pressure to bloom today. Even flowers take their time 🌸",
-  "Whatever happens today, you’ve got me in your corner ♡"
-];
-const hugLines = [
-  "Hug delivered 🤗",
-  "Another one, coming right up 🤗",
-  "This one’s an extra-tight squeeze",
-  "Long hug now. Don’t let go yet.",
-  "Still here. Still hugging ♡",
-  "Hug supply check: unlimited ✓",
-  "One more? Always one more 🤗"
-];
-/* =============================================== */
+(() => {
+  // ✏️ Names: change these two (or just find-and-replace "Bestie" in this file)
+  const TO_NAME = "Bestie";
+  const FROM_NAME = "Rishab";
 
-const $ = id => document.getElementById(id);
-const calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-const now = new Date();
-const store = {
-  get(k){ try { return localStorage.getItem(k); } catch (e) { return null; } },
-  set(k, v){ try { localStorage.setItem(k, v); } catch (e) {} }
-};
+  const root = document.documentElement;
+  const body = document.body;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const darkQuery = matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : darkQuery.matches;
 
-/* date + time-aware line */
-try {
-  $("today").textContent = now.toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" });
-} catch (e) {}
-const h = now.getHours();
-$("when").textContent =
-  h < 5  ? "Up this early? Rest a little more if you can ☾" :
-  h < 12 ? "Rise slowly. There’s no rush today ☀️" :
-  h < 17 ? "Okay, it’s not technically morning anymore, but this good morning still counts ☀️" :
-           "Reading this at night? Then here’s your good morning, in advance ☾";
+  document.querySelectorAll('[data-to]').forEach(el => { el.textContent = TO_NAME; });
+  document.querySelectorAll('[data-from]').forEach(el => { el.textContent = FROM_NAME; });
+  document.title = `Happy Diwali, ${TO_NAME}!`;
 
-/* little burst of hearts from an element */
-function burst(el, n, chars){
-  if (calm || !el || !el.animate) return;
-  const r = el.getBoundingClientRect(), layer = $("fx");
-  const cx = r.left + r.width / 2 - 12, cy = r.top + r.height / 2 - 12;
-  for (let i = 0; i < n; i++){
-    const s = document.createElement("span");
-    s.className = "spark";
-    s.textContent = chars[i % chars.length];
-    s.style.left = cx + "px"; s.style.top = cy + "px";
-    layer.appendChild(s);
-    const dx = (Math.random() - .5) * 200, dy = -(70 + Math.random() * 150);
-    const a = s.animate(
-      [{ transform: "translate(0,0) scale(.6)", opacity: 1 },
-       { transform: "translate(" + dx + "px," + dy + "px) scale(1.1)", opacity: 0 }],
-      { duration: 900 + Math.random() * 500, easing: "cubic-bezier(.2,.7,.3,1)" });
-    a.onfinish = () => s.remove();
+  /* ---------- Rangoli ---------- */
+  (function buildRangoli() {
+    const C = 200;
+    const petal = (r, len, wid, cls, angle) =>
+      `<path class="${cls}" d="M0 0Q${wid} ${-len / 2} 0 ${-len}Q${-wid} ${-len / 2} 0 0Z" transform="rotate(${angle.toFixed(2)} ${C} ${C}) translate(${C} ${C - r})"/>`;
+    let s = `<circle class="rg-dots" cx="${C}" cy="${C}" r="192"/>`;
+    for (let i = 0; i < 24; i++) s += petal(132, 54, 26, 'rg-a', i * 15);
+    for (let i = 0; i < 24; i++) s += petal(138, 30, 14, 'rg-e', i * 15 + 7.5);
+    s += `<circle class="rg-ring" cx="${C}" cy="${C}" r="126"/>`;
+    for (let i = 0; i < 24; i++) {
+      const a = (i * 15 + 7.5) * Math.PI / 180;
+      s += `<circle class="rg-d" cx="${(C + Math.sin(a) * 117).toFixed(1)}" cy="${(C - Math.cos(a) * 117).toFixed(1)}" r="3.2"/>`;
+    }
+    for (let i = 0; i < 16; i++) s += petal(68, 50, 28, 'rg-b', i * 22.5);
+    for (let i = 0; i < 16; i++) s += petal(74, 26, 12, 'rg-c', i * 22.5 + 11.25);
+    s += `<circle class="rg-ring" cx="${C}" cy="${C}" r="64"/>`;
+    for (let i = 0; i < 8; i++) s += petal(18, 40, 28, 'rg-c', i * 45);
+    s += `<circle class="rg-d" cx="${C}" cy="${C}" r="16"/>`;
+    document.getElementById('rangoliSpin').innerHTML = s;
+  })();
+
+  /* ---------- Toran (marigold garland) ---------- */
+  const toran = document.getElementById('toran');
+  function drawToran() {
+    const w = Math.max(toran.clientWidth || innerWidth, 320);
+    const h = 76;
+    toran.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    const count = Math.max(2, Math.round(w / (w < 640 ? 120 : 165)));
+    const sw = w / count;
+    const flower = (x, y, r, k) =>
+      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}" fill="${k % 2 ? '#F5B82E' : '#F08A12'}"/>` +
+      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r * 0.32).toFixed(1)}" fill="#B9450C" opacity=".45"/>`;
+    let out = '';
+    for (let s = 0; s < count; s++) {
+      const x0 = s * sw, x1 = x0 + sw, xm = x0 + sw / 2;
+      const beads = Math.round(sw / 10);
+      for (let k = 0; k <= beads; k++) {
+        const t = k / beads;
+        const x = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * xm + t * t * x1;
+        const y = (1 - t) * (1 - t) * 6 + 2 * (1 - t) * t * 58 + t * t * 6;
+        out += flower(x, y, 6, k);
+      }
+    }
+    for (let s = 0; s <= count; s++) {
+      const x = s * sw;
+      for (let k = 0; k < 3; k++) out += flower(x, 12 + k * 11, 5.2, k + 1);
+      out += `<path d="M${x.toFixed(1)} 44c7 6 7 16 0 24c-7-8-7-18 0-24z" fill="#3E8E4B"/>`;
+    }
+    toran.innerHTML = out;
   }
-}
-function pop(el){ el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
 
-/* missions: remembered for today only */
-const items = Array.from(document.querySelectorAll(".mi"));
-const pad = n => String(n).padStart(2, "0");
-const dayKey = "arpita-missions-" + now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
-let done = [];
-try {
-  const saved = JSON.parse(store.get(dayKey) || "[]");
-  if (Array.isArray(saved)) done = saved.filter(x => typeof x === "number");
-  for (let i = localStorage.length - 1; i >= 0; i--){
-    const k = localStorage.key(i);
-    if (k && k.indexOf("arpita-missions-") === 0 && k !== dayKey) localStorage.removeItem(k);
+  /* ---------- Starry sky (dark mode) ---------- */
+  const sky = document.getElementById('sky');
+  const sctx = sky.getContext('2d');
+  function drawSky() {
+    const d = Math.min(devicePixelRatio || 1, 2), w = innerWidth, h = innerHeight;
+    sky.width = Math.round(w * d); sky.height = Math.round(h * d);
+    sctx.setTransform(d, 0, 0, d, 0, 0);
+    sctx.clearRect(0, 0, w, h);
+    if (!isDark()) return;
+    let seed = 20261108;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const n = Math.round((w * h) / 7000);
+    for (let i = 0; i < n; i++) {
+      const x = rnd() * w, y = rnd() * h;
+      const big = rnd() < 0.08;
+      const r = big ? 1.1 + rnd() * 0.9 : 0.35 + rnd() * 0.75;
+      sctx.globalAlpha = big ? 0.85 : 0.25 + rnd() * 0.5;
+      sctx.fillStyle = rnd() < 0.2 ? '#FFD9A0' : '#FFF4E0';
+      sctx.beginPath(); sctx.arc(x, y, r, 0, Math.PI * 2); sctx.fill();
+    }
+    sctx.globalAlpha = 1;
   }
-} catch (e) {}
-function renderMissions(){
-  let n = 0;
-  items.forEach((b, i) => { const on = done.indexOf(i) > -1; b.setAttribute("aria-pressed", String(on)); if (on) n++; });
-  $("bar").style.width = (n / items.length * 100) + "%";
-  $("status").textContent =
-    n === 0 ? "Start whenever you’re ready ✿" :
-    n < items.length ? n + " of " + items.length + " done. Look at you go ✿" :
-    "All " + items.length + " done! I’m so proud of you 🎉";
-  return n;
-}
-items.forEach((b, i) => b.addEventListener("click", () => {
-  const was = done.indexOf(i) > -1;
-  done = was ? done.filter(x => x !== i) : done.concat(i);
-  store.set(dayKey, JSON.stringify(done));
-  const n = renderMissions();
-  if (!was){
-    burst(b.querySelector(".box"), 6, ["✧", "♡"]);
-    if (n === items.length) burst($("status"), 18, ["♡", "💗", "✿", "🎉"]);
+
+  /* ---------- Fireworks ---------- */
+  const fw = document.getElementById('fireworks');
+  const fctx = fw.getContext('2d');
+  let W = innerWidth, H = innerHeight, raf = null;
+  const rockets = [], sparks = [];
+  const PAL_DARK = ['#F6B93B', '#FF8A1F', '#E0368E', '#FFE7A3', '#E8475A', '#7FD6C2'];
+  const PAL_LIGHT = ['#E8730C', '#B0136A', '#C21F33', '#C98A12', '#1E7F72', '#6A2C91'];
+  const pick = () => { const p = isDark() ? PAL_DARK : PAL_LIGHT; return p[Math.floor(Math.random() * p.length)]; };
+
+  function sizeFw() {
+    const d = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    fw.width = Math.round(W * d); fw.height = Math.round(H * d);
+    fctx.setTransform(d, 0, 0, d, 0, 0);
   }
-}));
-renderMissions();
+  function start() { if (!raf) raf = requestAnimationFrame(tick); }
+  function launch(x, y) {
+    if (reduceMotion) return;
+    rockets.push({ x, y0: H + 10, y: H + 10, ty: y, t: 0, dur: 0.75 + Math.random() * 0.3, color: pick() });
+    start();
+  }
+  function burst(x, y, color, n, power) {
+    n = n || 64 + Math.floor(Math.random() * 28);
+    power = power || 1;
+    const alt = pick();
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 + Math.random() * 0.2;
+      const s = (1.4 + Math.random() * 3.6) * power;
+      sparks.push({
+        x, y,
+        vx: Math.cos(a) * s, vy: Math.sin(a) * s,
+        life: 1,
+        decay: power < 1 ? 0.03 + Math.random() * 0.02 : 0.011 + Math.random() * 0.012,
+        color: Math.random() < 0.72 ? color : alt,
+        size: 1.3 + Math.random() * 1.3
+      });
+    }
+  }
+  function sparkle(x, y) {
+    if (reduceMotion) return;
+    burst(x, y, isDark() ? '#FFD27A' : '#E8730C', 18, 0.55);
+    start();
+  }
+  function showtime(count) {
+    for (let i = 0; i < count; i++) {
+      setTimeout(() => launch(W * (0.12 + Math.random() * 0.76), H * (0.12 + Math.random() * 0.3)), i * 320 + Math.random() * 140);
+    }
+  }
+  function tick() {
+    fctx.clearRect(0, 0, W, H);
+    fctx.globalCompositeOperation = isDark() ? 'lighter' : 'source-over';
+    fctx.lineCap = 'round';
+    for (let i = rockets.length - 1; i >= 0; i--) {
+      const r = rockets[i];
+      const prev = r.y;
+      r.t += 1 / (60 * r.dur);
+      const e = 1 - Math.pow(1 - Math.min(r.t, 1), 3);
+      r.y = r.y0 + (r.ty - r.y0) * e;
+      fctx.globalAlpha = 0.9;
+      fctx.strokeStyle = r.color;
+      fctx.lineWidth = 2;
+      fctx.beginPath(); fctx.moveTo(r.x, prev + 14); fctx.lineTo(r.x, r.y); fctx.stroke();
+      if (r.t >= 1) { burst(r.x, r.y, r.color); rockets.splice(i, 1); }
+    }
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const p = sparks[i];
+      p.vx *= 0.975; p.vy = p.vy * 0.975 + 0.045;
+      p.x += p.vx; p.y += p.vy;
+      p.life -= p.decay;
+      if (p.life <= 0) { sparks.splice(i, 1); continue; }
+      fctx.globalAlpha = p.life;
+      fctx.strokeStyle = p.color;
+      fctx.lineWidth = p.size;
+      fctx.beginPath(); fctx.moveTo(p.x - p.vx * 2.5, p.y - p.vy * 2.5); fctx.lineTo(p.x, p.y); fctx.stroke();
+    }
+    fctx.globalAlpha = 1;
+    if (rockets.length || sparks.length) raf = requestAnimationFrame(tick);
+    else { raf = null; fctx.clearRect(0, 0, W, H); }
+  }
 
-/* letters */
-const box = $("letter"), envs = Array.from(document.querySelectorAll(".env"));
-let openKey = null, opener = null;
-function closeLetter(returnFocus){
-  box.hidden = true; openKey = null;
-  envs.forEach(x => x.setAttribute("aria-expanded", "false"));
-  if (returnFocus && opener) opener.focus();
-}
-envs.forEach(b => b.addEventListener("click", () => {
-  const k = b.dataset.k, l = letters[k];
-  if (openKey === k && !box.hidden){ closeLetter(false); return; }
-  openKey = k; opener = b;
-  $("lt").textContent = l.title; $("ltx").textContent = l.text;
-  envs.forEach(x => x.setAttribute("aria-expanded", String(x === b)));
-  box.hidden = false;
-  box.style.animation = "none"; void box.offsetWidth; box.style.animation = "";
-  box.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
-}));
-$("close").addEventListener("click", () => closeLetter(true));
-document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeLetter(true); });
+  /* ---------- Hero diya ---------- */
+  const heroDiya = document.getElementById('heroDiya');
+  heroDiya.addEventListener('click', () => {
+    if (body.classList.contains('is-lit')) {
+      launch(W * (0.2 + Math.random() * 0.6), H * (0.14 + Math.random() * 0.2));
+      return;
+    }
+    heroDiya.classList.add('lit');
+    heroDiya.setAttribute('aria-label', 'The diya is lit. Tap it for a firework');
+    body.classList.add('is-lit');
+    setTimeout(() => launch(W * 0.26, H * 0.24), 1000);
+    setTimeout(() => launch(W * 0.74, H * 0.18), 1350);
+  });
 
-/* emergency kit */
-let hugs = parseInt(store.get("arpita-hugs") || "0", 10) || 0;
-function showCount(){ if (hugs > 0) $("count").textContent = "Hugs collected so far: " + hugs; }
-showCount();
-$("hugBtn").addEventListener("click", e => {
-  hugs++;
-  store.set("arpita-hugs", String(hugs));
-  $("say").textContent = hugLines[(hugs - 1) % hugLines.length];
-  showCount();
-  pop(e.currentTarget);
-  burst(e.currentTarget, 12, ["♡", "💗", "✿", "💕"]);
-});
-let lastThought = -1;
-$("thoughtBtn").addEventListener("click", e => {
-  let i; do { i = Math.floor(Math.random() * thoughts.length); } while (i === lastThought);
-  lastThought = i;
-  $("say").textContent = thoughts[i];
-  pop(e.currentTarget);
-  burst(e.currentTarget, 7, ["✧", "☀️", "✿"]);
-});
+  /* ---------- Five diyas ---------- */
+  const poems = [...document.querySelectorAll('#poemSource > li')]
+    .map(li => [...li.querySelectorAll('span')].map(s => s.textContent.trim()));
+  const row = document.getElementById('diyaRow');
+  const panel = document.getElementById('poemPanel');
+  const count = document.getElementById('count');
+  const template = heroDiya.querySelector('svg').outerHTML;
+  const delays = ['-0.2s', '-0.9s', '-0.5s', '-1.3s', '-0.7s'];
+  const lit = new Set();
+  let finaleShown = false;
+
+  count.textContent = `0 of ${poems.length} diyas lit`;
+
+  poems.forEach((lines, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'diya-btn row-diya';
+    b.style.setProperty('--fd', delays[i % delays.length]);
+    b.setAttribute('aria-label', `Light diya ${i + 1}`);
+    b.innerHTML = template.replace(/-h\b/g, `-r${i}`);
+    b.addEventListener('click', () => onRowDiya(i, b));
+    row.appendChild(b);
+  });
+
+  function showPoem(i) {
+    const p = document.createElement('p');
+    p.className = 'poem';
+    poems[i].forEach((line, k) => {
+      const s = document.createElement('span');
+      s.className = 'poem-line';
+      s.style.setProperty('--d', `${k * 160}ms`);
+      s.textContent = line;
+      p.appendChild(s);
+    });
+    panel.replaceChildren(p);
+  }
+
+  function onRowDiya(i, b) {
+    const firstTime = !lit.has(i);
+    if (firstTime) {
+      lit.add(i);
+      b.classList.add('lit');
+      b.setAttribute('aria-label', `Diya ${i + 1}, read its lines again`);
+      const r = b.getBoundingClientRect();
+      sparkle(r.left + r.width / 2, r.top + r.height * 0.2);
+    }
+    row.querySelectorAll('.row-diya').forEach(x => {
+      x.classList.toggle('is-current', x === b);
+      x.removeAttribute('aria-current');
+    });
+    b.setAttribute('aria-current', 'true');
+    showPoem(i);
+
+    if (lit.size === poems.length) {
+      count.textContent = `All ${poems.length} diyas lit. Scroll down, there’s one more thing for you.`;
+      if (!finaleShown) {
+        finaleShown = true;
+        body.classList.add('finale-on');
+        setTimeout(() => showtime(9), 600);
+      }
+    } else {
+      count.textContent = `${lit.size} of ${poems.length} diyas lit`;
+    }
+  }
+
+  document.getElementById('againBtn').addEventListener('click', () => showtime(8));
+  document.addEventListener('click', e => {
+    if (!finaleShown || e.target.closest('button, a')) return;
+    launch(e.clientX, e.clientY);
+  });
+
+  /* ---------- Sizing ---------- */
+  let lastW = 0;
+  function onResize() {
+    sizeFw();
+    if (innerWidth !== lastW) { lastW = innerWidth; drawSky(); drawToran(); }
+  }
+  addEventListener('resize', () => requestAnimationFrame(onResize));
+  if (darkQuery.addEventListener) darkQuery.addEventListener('change', drawSky);
+  onResize();
+})();
 </script>
 </body>
 </html>
