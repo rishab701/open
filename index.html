@@ -3,302 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Get well soon, Arpita</title>
+<title>A sky of stars for Arpita</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Nunito:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: light;
-    --bg: #EAF6F3;
-    --bg2: #FFF6D6;
-    --ink: #1F3340;
-    --soft: #4F6874;
-    --sun: #F5B921;
-    --sun-deep: #D98E04;
-    --leaf: #2F8F7B;
-    --rose: #E26D8A;
-    --card: #FFFFFF;
-    --line: #BFE3DB;
-    --focus: #1F3340;
-    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    color-scheme: dark;
+    --bg1: #0A0F2C; --bg2: #2B1B4F;
+    --ink: #F6EEDC; --soft: #B9B4D6;
+    --gold: #FFD98A; --rose: #FF9DB8; --mint: #9BE3D0;
+    --card: rgba(255,255,255,.07); --line: rgba(255,217,138,.35);
+    --focus: #FFFFFF;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
     --body: "Nunito", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
     --hindi: "Tiro Devanagari Hindi", "Noto Serif Devanagari", "Mangal", Georgia, serif;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      color-scheme: dark;
-      --bg: #0F2229; --bg2: #1B2A24; --ink: #F3EFD9; --soft: #B5C7C4;
-      --sun: #FFD25A; --sun-deep: #FFC233; --leaf: #6FD1BB; --rose: #F59AB2;
-      --card: #17323A; --line: #2B5560; --focus: #FFD25A;
-    }
-  }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --bg: #0F2229; --bg2: #1B2A24; --ink: #F3EFD9; --soft: #B5C7C4;
-    --sun: #FFD25A; --sun-deep: #FFC233; --leaf: #6FD1BB; --rose: #F59AB2;
-    --card: #17323A; --line: #2B5560; --focus: #FFD25A;
-  }
   *, *::before, *::after { box-sizing: inherit; }
-  html { background: var(--bg); scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
-  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-  body {
-    margin: 0; background: linear-gradient(var(--bg) 0, var(--bg2) 100%) fixed; color: var(--ink);
-    font-family: var(--body); font-size: 1.125rem; line-height: 1.75; overflow-x: hidden;
-  }
+  html { background: var(--bg1); -webkit-text-size-adjust: 100%; }
+  body { margin: 0; min-height: 100svh; color: var(--ink); font-family: var(--body); font-size: 1.1rem; line-height: 1.7;
+    background: radial-gradient(120% 80% at 80% 0%, var(--bg2), var(--bg1) 70%) fixed; overflow-x: hidden; }
   :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-  .float { position: fixed; bottom: -30px; pointer-events: none; z-index: 20; font-size: 1.6rem; animation: rise 5s ease-out forwards; }
-  @keyframes rise { to { transform: translateY(-110vh) rotate(25deg); opacity: 0; } }
+  #bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+  .wrap { position: relative; z-index: 1; max-width: 40rem; margin: 0 auto; padding: 40px 20px 56px; text-align: center; }
+  .moon { position: absolute; top: 18px; right: 18px; width: 54px; height: 54px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #FFFBEF, #F3E3B5 60%, #D8C48C); box-shadow: 0 0 40px 8px rgba(255,236,170,.35); }
+  .moon::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--bg1); transform: translate(14px, -6px) scale(.85); opacity: .0; }
+  h1 { margin: 56px 0 .2rem; font-family: var(--serif); font-weight: 600; font-size: clamp(2.4rem, 10vw, 4rem); line-height: 1.08; color: var(--gold); text-wrap: balance; text-shadow: 0 0 30px rgba(255,217,138,.35); }
+  .sub { margin: .4rem auto 0; max-width: 26rem; color: var(--soft); }
 
-  /* Hero */
-  .hero { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 48px 22px; }
-  .sun-btn { appearance: none; background: none; border: 0; padding: 0; cursor: pointer; width: min(62vw, 250px); border-radius: 50%; }
-  .sun { display: block; width: 100%; height: auto; overflow: visible; }
-  .rays { transform-origin: 100px 100px; transition: transform 1.4s cubic-bezier(.16,1,.3,1), opacity .8s; opacity: .35; transform: scale(.7); }
-  .glow { opacity: 0; transition: opacity 1s; }
-  .core { fill: var(--sun); transition: fill .6s; }
-  .face { opacity: 0; transition: opacity .6s .3s; }
-  .on .rays { opacity: 1; transform: scale(1) rotate(25deg); }
-  .on .glow { opacity: .55; }
-  .on .face { opacity: 1; }
-  .on .core { fill: var(--sun-deep); }
-  .tap { margin: .8rem 0 0; font-style: italic; color: var(--soft); transition: opacity .3s; }
-  .on .tap { opacity: 0; }
-  .reveal { transition: opacity 1s ease .5s, transform 1s ease .5s; }
-  .js:not(.on) .reveal { opacity: 0; transform: translateY(14px); visibility: hidden; }
-  h1 { margin: .4rem 0 0; font-family: var(--display); font-weight: 700; font-size: clamp(2.3rem, 9.5vw, 4.6rem); line-height: 1.08; text-wrap: balance; }
-  .sub { margin: .8rem auto 1.4rem; max-width: 26rem; color: var(--soft); font-size: 1.25rem; }
-  .cue { font-weight: 700; color: var(--ink); text-underline-offset: .25em; text-decoration-color: var(--sun-deep); text-decoration-thickness: 2px; }
+  .sky { position: relative; height: clamp(250px, 44svh, 360px); margin: 18px 0 6px; }
+  .star { position: absolute; width: 48px; height: 48px; margin: -24px 0 0 -24px; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 50%; display: grid; place-items: center; }
+  .star svg { width: 30px; height: 30px; overflow: visible; filter: drop-shadow(0 0 8px rgba(255,217,138,.9)); animation: tw 2.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  .star path { fill: var(--gold); transition: fill .4s; }
+  .star.seen svg { animation: none; filter: drop-shadow(0 0 6px rgba(255,157,184,.8)); }
+  .star.seen path { fill: var(--rose); }
+  .star.now svg { transform: scale(1.35); }
+  @keyframes tw { 0%,100% { transform: scale(.85); opacity: .7; } 50% { transform: scale(1.15); opacity: 1; } }
+  .count { margin: 0; color: var(--soft); font-style: italic; min-height: 1.7em; }
 
-  /* Sections */
-  .section { padding: clamp(56px, 9vw, 96px) 22px; }
-  .inner { max-width: 34rem; margin: 0 auto; }
-  h2 { margin: 0 0 .5em; font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.15; text-wrap: balance; }
-  .letter p { margin: 0 0 1.1em; }
-  .letter .hi { font-family: var(--display); font-size: 1.8rem; font-style: italic; margin-bottom: .5em; }
+  .card { margin: 18px auto 0; max-width: 30rem; min-height: 11.5rem; display: grid; place-items: center; padding: 1.4rem 1.4rem;
+    background: var(--card); border: 1.5px solid var(--line); border-radius: 24px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .card p { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.4rem, 5vw, 1.75rem); line-height: 1.5; text-wrap: balance; }
+  .card .hint { color: var(--soft); }
+  .card .hi { font-size: clamp(1.3rem, 4.8vw, 1.6rem); line-height: 1.75; }
+  .card .hi span { display: block; }
+  .fade { animation: in .8s ease both; }
+  @keyframes in { from { opacity: 0; transform: translateY(8px); } }
 
-  /* Shayari (Hindi) */
-  .poems { display: grid; gap: 22px; }
-  .poem { background: var(--card); border: 1.5px solid var(--line); border-left: 6px solid var(--leaf); border-radius: 6px 22px 22px 6px; padding: 1.4rem 1.5rem; font-family: var(--hindi); font-weight: 400; font-size: 1.35rem; line-height: 1.85; margin: 0; }
-  .poem:nth-child(2) { border-left-color: var(--sun-deep); }
-  .poem:nth-child(3) { border-left-color: var(--rose); }
-  .poem span { display: block; }
-  .poem small { display: block; margin-top: .8rem; font-family: var(--body); font-style: normal; font-size: .95rem; color: var(--soft); }
+  .btn { appearance: none; font: inherit; font-weight: 700; padding: .7em 1.4em; border-radius: 999px; cursor: pointer; margin-top: 1.4rem;
+    border: 1.5px solid var(--gold); background: transparent; color: var(--ink); }
+  .btn:hover { background: var(--gold); color: #1A1233; }
 
-  /* Prescription */
-  .rx { background: var(--card); border: 2px dashed var(--leaf); border-radius: 18px; padding: 1.5rem; }
-  .rx-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-weight: 700; color: var(--soft); border-bottom: 1.5px solid var(--line); padding-bottom: .7rem; margin-bottom: .6rem; }
-  .rx ul { list-style: none; margin: 0; padding: 0; }
-  .rx li + li { border-top: 1px solid var(--line); }
-  .rx label { display: flex; gap: 14px; align-items: flex-start; padding: .8rem 0; cursor: pointer; }
-  .rx input { appearance: none; -webkit-appearance: none; flex: none; width: 28px; height: 28px; margin-top: 2px; border: 2px solid var(--leaf); border-radius: 8px; background: transparent; cursor: pointer; display: grid; place-content: center; }
-  .rx input::after { content: ""; width: 14px; height: 8px; border-left: 3px solid var(--bg); border-bottom: 3px solid var(--bg); transform: rotate(-45deg) scale(0); transition: transform .2s; margin-top: -3px; }
-  .rx input:checked { background: var(--leaf); }
-  .rx input:checked::after { transform: rotate(-45deg) scale(1); }
-  .rx input:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
-  .rx b { display: block; }
-  .rx em { color: var(--soft); font-size: 1rem; }
-  .rx-note { margin: 1rem 0 0; min-height: 1.7em; font-weight: 700; color: var(--leaf); }
+  .finale { margin-top: 3rem; }
+  .js:not(.done) .finale { display: none; }
+  .finale h2 { margin: 0 0 1rem; font-family: var(--serif); font-weight: 600; font-size: clamp(1.9rem, 7vw, 2.8rem); color: var(--gold); line-height: 1.15; }
+  .finale p { margin: 0 0 1.1em; font-family: var(--serif); font-size: 1.4rem; line-height: 1.6; }
+  .sign { color: var(--soft); font-family: var(--body) !important; font-size: 1.05rem !important; }
+  .sign strong { display: block; font-family: var(--serif); font-size: 2rem; color: var(--ink); line-height: 1.3; }
+  .done .finale { animation: in 1.2s ease both; }
 
-  .warm { background: var(--card); border: 1.5px solid var(--line); border-radius: 22px; padding: 1.6rem 1.4rem; text-align: center; }
-  .warm-msg { margin: 0; min-height: 5.2em; display: grid; place-items: center; font-family: var(--display); font-style: italic; font-size: 1.4rem; line-height: 1.5; text-wrap: balance; }
-  .warm .btn { margin-top: 1rem; }
-
-  /* Finale */
-  .finale { text-align: center; }
-  .sher { font-family: var(--hindi); font-size: clamp(1.45rem, 5vw, 2rem); line-height: 1.7; margin: 1rem 0 2rem; text-wrap: balance; }
-  .sher span { display: block; }
-  .sign { color: var(--soft); margin: 0; }
-  .sign strong { display: block; font-family: var(--display); font-size: 1.9rem; color: var(--ink); line-height: 1.3; }
-  .btn { appearance: none; font: inherit; font-weight: 700; padding: .75em 1.5em; border: 2px solid var(--sun-deep); border-radius: 999px; background: var(--sun); color: #2A1E00; cursor: pointer; margin-top: 1.6rem; }
-  .btn:hover { filter: brightness(1.05); }
+  /* Breathe overlay */
+  .breathe { position: fixed; inset: 0; z-index: 50; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+    background: rgba(8,10,34,.94); padding: 24px; }
+  .breathe.open { display: flex; }
+  .orb { width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFF4D0, var(--gold) 60%, #E9A64A);
+    box-shadow: 0 0 60px 10px rgba(255,217,138,.4); animation: breathe 8s ease-in-out infinite; }
+  @keyframes breathe { 0%,100% { transform: scale(.7); } 50% { transform: scale(1.3); } }
+  .breathe p { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.7rem; text-align: center; }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; transition-delay: 0ms !important; }
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   }
 </style>
-<script>
-  document.documentElement.classList.add('js');
-</script>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<div id="page">
-<header class="hero" id="hero">
-  <button class="sun-btn" id="sunBtn" type="button" aria-label="Wake up the sun">
-    <svg class="sun" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
-      <circle class="glow" cx="100" cy="100" r="98" fill="#FFD25A"/>
-      <g class="rays" stroke="#F5B921" stroke-width="7" stroke-linecap="round">
-        <path d="M100 8v22M100 170v22M8 100h22M170 100h22M35 35l15 15M150 150l15 15M165 35l-15 15M50 150l-15 15"/>
-      </g>
-      <circle class="core" cx="100" cy="100" r="52"/>
-      <g class="face" fill="#2A1E00">
-        <circle cx="82" cy="94" r="5"/><circle cx="118" cy="94" r="5"/>
-        <path d="M80 112q20 20 40 0" fill="none" stroke="#2A1E00" stroke-width="5" stroke-linecap="round"/>
-      </g>
-      <g class="face" fill="#E26D8A" opacity=".6"><circle cx="72" cy="108" r="6"/><circle cx="128" cy="108" r="6"/></g>
-    </svg>
-  </button>
-  <p class="tap">The sun is still asleep. Tap to wake it up.</p>
-  <div class="reveal">
-    <h1>Get well soon,<br><span data-to>Arpita</span>!</h1>
-    <p class="sub">At home they call you <span data-nick>Khushi</span>, and everything feels a little incomplete without your happiness.</p>
-    <a class="cue" href="#letter">A little letter for you</a>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="moon" aria-hidden="true"></div>
+
+<div class="wrap">
+  <h1>Thinking of you,<br><span data-to>Arpita</span></h1>
+  <p class="sub">No questions, no pressure. The sky has a few little things for you, <span data-nick>Khushi</span>. Tap the glowing stars.</p>
+
+  <div class="sky" id="sky" role="group" aria-label="Seven stars"></div>
+  <p class="count" id="count" aria-live="polite">0 of 7 stars found</p>
+
+  <div class="card" id="card" aria-live="polite">
+    <p class="hint">Pick any star to begin.</p>
   </div>
-</header>
 
-<main>
-  <section class="section letter" id="letter" aria-label="Letter">
-    <div class="inner">
-      <p class="hi">Dear <span data-to>Arpita</span> (my <span data-nick>Khushi</span>),</p>
-      <p>I heard you’re not feeling well, and honestly, it made me a little sad too. When you’re feeling low, everything feels quiet. Without you, the laughter and the nonsense are both missing.</p>
-      <p>Just remember one thing: you’re not alone. I’m right here, one message away. Rest a lot, and be gentle with yourself. I’ll take care of the rest. You just get better and come back soon.</p>
-      <p>So I made you this small corner of the internet. Below you’ll find a few lines of shayari, a little checklist of small things that help, and a lot of prayers.</p>
-    </div>
-  </section>
+  <button class="btn" id="breatheBtn" type="button">Breathe with me for a minute</button>
 
-  <section class="section" aria-labelledby="pt">
-    <div class="inner">
-      <h2 id="pt">A few words for you</h2>
-      <div class="poems">
-        <blockquote class="poem" lang="hi">
-          <span>दर्द से कह दो अब ज़रा ठहर जाए,</span>
-          <span>मेरी दोस्त की मुस्कान फिर से खिल जाए,</span>
-          <span>दुआ है रब से बस यही सुबह-शाम,</span>
-          <span>तेरी हर साँस में सुकून भर जाए।</span>
-        </blockquote>
-        <blockquote class="poem" lang="hi">
-          <span>दिल की उदासी भी आती-जाती रहती है,</span>
-          <span>तेरी हँसी भी तुझसे दूर कहाँ जाती है,</span>
-          <span>थोड़ा सब्र, थोड़ा आराम, फिर देखना,</span>
-          <span>वही ख़ुशी लौटेगी, जो सबको ख़ुश रखती है।</span>
-        </blockquote>
-        <blockquote class="poem" lang="hi">
-          <span>हर उदासी में दुआ काम आती है,</span>
-          <span>और मेरी हर दुआ में बस तू ही आती है।</span>
-          <small>A sher, just for you.</small>
-        </blockquote>
-      </div>
-    </div>
+  <section class="finale" aria-labelledby="ft">
+    <h2 id="ft">You found every star</h2>
+    <p>Whatever is going on, you’re not alone, <span data-nick>Khushi</span>. You don’t have to say a word. Just know that I’m right here, today and every day after.</p>
+    <p class="sign">Always on your side,<strong data-from>Your Friend</strong></p>
   </section>
+</div>
 
-  <section class="section" aria-labelledby="rt">
-    <div class="inner">
-      <h2 id="rt">A few things that might help</h2>
-      <div class="rx">
-        <div class="rx-head"><span>For: <span data-to>Arpita</span> (<span data-nick>Khushi</span>)</span><span>♡</span></div>
-        <ul id="rxList">
-          <li><label><input type="checkbox"><span><b>Rest</b><em>As much as you like, with zero guilt.</em></span></label></li>
-          <li><label><input type="checkbox"><span><b>Your favourite chai or coffee</b><em>Slowly, with no phone in your hand.</em></span></label></li>
-          <li><label><input type="checkbox"><span><b>A little fresh air</b><em>Even five minutes by the window counts.</em></span></label></li>
-          <li><label><input type="checkbox"><span><b>A good movie or series</b><em>Phone far away, mind at peace.</em></span></label></li>
-          <li><label><input type="checkbox"><span><b>Your friend’s nonsense</b><em>Unlimited, whenever you feel like it.</em></span></label></li>
-        </ul>
-        <p class="rx-note" id="rxNote" aria-live="polite">Tick each one as you go.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="at">
-    <div class="inner">
-      <h2 id="at">When you feel alone, read this</h2>
-      <p>Sometimes you can feel alone even in a crowd, and being unwell makes it worse. That feeling comes, and it also passes. Until it does, you’re not alone.</p>
-      <blockquote class="poem" lang="hi" style="margin:1.6rem 0">
-        <span>रात कितनी भी लंबी हो, सुबह आती है,</span>
-        <span>उदासी की भी एक हद होती है,</span>
-        <span>तू न सोच कि कोई नहीं है साथ तेरे,</span>
-        <span>एक दोस्त की दुआ हर पल तेरे साथ होती है।</span>
-      </blockquote>
-      <div class="warm" aria-live="polite">
-        <p class="warm-msg" id="warmMsg">Tap, and I’ll remind you of something small.</p>
-        <button class="btn" id="warmBtn" type="button">I need a little love</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section finale" aria-labelledby="ft">
-    <div class="inner">
-      <h2 id="ft">One last thing</h2>
-      <blockquote class="sher" lang="hi" style="margin-inline:0">
-        <span>तेरी हँसी के बिना हर लम्हा सूना है,</span>
-        <span>जल्दी ठीक हो जा, अब इंतज़ार दूना है।</span>
-      </blockquote>
-      <p class="sign">With lots of love and prayers,<strong data-from>Your Friend</strong></p>
-      <button class="btn" id="bloom" type="button">Send flowers from me</button>
-    </div>
-  </section>
-</main>
+<div class="breathe" id="breathe" role="dialog" aria-modal="true" aria-label="Breathing exercise">
+  <div class="orb" aria-hidden="true"></div>
+  <p id="breatheTxt" aria-live="polite">Breathe in…</p>
+  <button class="btn" id="breatheClose" type="button">I feel a little lighter</button>
 </div>
 
 <script>
 (() => {
   // Names: change these here
-  const TO_NAME = "Arpita";
-  const NICK = "Khushi";
-  const FROM_NAME = "Your Friend";
+  const TO_NAME = "Arpita", NICK = "Khushi", FROM_NAME = "Your Friend";
 
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('[data-to]').forEach(e => e.textContent = TO_NAME);
   document.querySelectorAll('[data-nick]').forEach(e => e.textContent = NICK);
   document.querySelectorAll('[data-from]').forEach(e => e.textContent = FROM_NAME);
-  document.title = `Get well soon, ${TO_NAME}`;
 
-  const icons = ['🌼', '🌸', '🌻', '💛', '🌷'];
-  function bloom(n) {
-    if (reduce) return;
-    for (let i = 0; i < n; i++) {
-      const s = document.createElement('span');
-      s.className = 'float';
-      s.textContent = icons[Math.floor(Math.random() * icons.length)];
-      s.style.left = (5 + Math.random() * 90) + 'vw';
-      s.style.animationDelay = (Math.random() * 1.2) + 's';
-      s.style.animationDuration = (3.5 + Math.random() * 2.5) + 's';
-      s.setAttribute('aria-hidden', 'true');
-      document.body.appendChild(s);
-      setTimeout(() => s.remove(), 7500);
-    }
+  /* Notes: en = English text, hi = Hindi lines */
+  const notes = [
+    { x: 14, y: 30, en: 'You don’t have to explain anything. Not today, not ever, unless you want to.' },
+    { x: 38, y: 12, hi: ['Chaand bhi akela hai, phir bhi roshan rehta hai,', 'Andheron se kab woh shikayat karta hai,', 'Tu bhi chamkegi yunhi, dekhna ek din,', 'Yeh mausam bhi toh aakhir badalta hai.'] },
+    { x: 64, y: 34, en: 'Be gentle with yourself today. You’re doing better than you think.' },
+    { x: 86, y: 16, hi: ['Chup reh kar bhi tu bahut kuch keh jaati hai,', 'Teri khamoshi bhi mujh tak pahunch jaati hai,', 'Jab bhi lage ki koi nahi hai paas tere,', 'Yaad rakhna, dosti har doori mitati hai.'] },
+    { x: 24, y: 70, en: 'Whenever it feels heavy, send me a random meme. I’ll know exactly what it means.' },
+    { x: 55, y: 80, hi: ['Gham baantne se halka hota hai, yeh suna hai,', 'Toh aadha tera, aadha mera, yahi dosti ka faisla hai.'] },
+    { x: 80, y: 62, en: 'Your laughter is one of my favourite sounds. There’s no rush. I’ll wait for it.' }
+  ];
+
+  const sky = document.getElementById('sky');
+  const card = document.getElementById('card');
+  const count = document.getElementById('count');
+  const seen = new Set();
+  const NS = 'http://www.w3.org/2000/svg';
+
+  notes.forEach((n, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'star';
+    b.style.left = n.x + '%';
+    b.style.top = n.y + '%';
+    b.style.setProperty('--d', (i * 0.37) + 's');
+    b.setAttribute('aria-label', `Star ${i + 1}`);
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1.5l2.7 6.6 7.1.6-5.4 4.6 1.7 6.9L12 16.4 5.9 20.2l1.7-6.9L2.2 8.7l7.1-.6z"/></svg>';
+    b.addEventListener('click', () => open(i, b));
+    sky.appendChild(b);
+  });
+
+  function open(i, b) {
+    const n = notes[i];
+    const p = document.createElement('p');
+    p.className = 'fade';
+    if (n.hi) {
+      p.classList.add('hi');
+      n.hi.forEach(l => { const s = document.createElement('span'); s.textContent = l; p.appendChild(s); });
+    } else p.textContent = n.en;
+    card.replaceChildren(p);
+
+    sky.querySelectorAll('.star').forEach(s => s.classList.remove('now'));
+    b.classList.add('now', 'seen');
+    seen.add(i);
+    b.setAttribute('aria-label', `Star ${i + 1}, read again`);
+
+    if (seen.size === notes.length) {
+      count.textContent = 'All 7 stars found. Scroll down, there’s one more thing.';
+      if (!root.classList.contains('done')) {
+        root.classList.add('done');
+        setTimeout(() => document.querySelector('.finale').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }), 2600);
+      }
+    } else count.textContent = `${seen.size} of ${notes.length} stars found`;
   }
 
-  const btn = document.getElementById('sunBtn');
-  btn.addEventListener('click', () => {
-    if (!root.classList.contains('on')) {
-      root.classList.add('on');
-      btn.setAttribute('aria-label', 'The sun is awake');
-      bloom(10);
-    } else bloom(6);
+  /* Breathing */
+  const ov = document.getElementById('breathe');
+  const bt = document.getElementById('breatheTxt');
+  let timer = null, inhale = true;
+  function tickBreath() { bt.textContent = inhale ? 'Breathe in…' : 'Breathe out…'; inhale = !inhale; }
+  document.getElementById('breatheBtn').addEventListener('click', () => {
+    ov.classList.add('open'); inhale = true; tickBreath(); timer = setInterval(tickBreath, 4000);
+    document.getElementById('breatheClose').focus();
   });
-
-  const boxes = [...document.querySelectorAll('#rxList input')];
-  const note = document.getElementById('rxNote');
-  boxes.forEach(b => b.addEventListener('change', () => {
-    const done = boxes.filter(x => x.checked).length;
-    if (done === boxes.length) {
-      note.textContent = `All done! Now smile a little, ${NICK}.`;
-      bloom(14);
-    } else if (done === 0) note.textContent = 'Tick each one as you go.';
-    else note.textContent = `${done} of ${boxes.length} done. Well done!`;
-  }));
-
-  const warm = [
-    `${NICK}, you’re not alone. I’m just one message away.`,
-    'This day will pass too. Taking care of yourself today is enough.',
-    'You don’t have to prove anything to anyone. Just rest.',
-    'When your heart feels heavy, tell me. I’m here to listen.',
-    'You are wonderful exactly as you are. Never forget that.',
-    'My world is a little quieter without you. Come back soon.'
-  ];
-  let wi = -1;
-  const wm = document.getElementById('warmMsg');
-  document.getElementById('warmBtn').addEventListener('click', () => {
-    wi = (wi + 1) % warm.length;
-    wm.textContent = warm[wi];
-    bloom(5);
+  document.getElementById('breatheClose').addEventListener('click', () => {
+    ov.classList.remove('open'); clearInterval(timer); document.getElementById('breatheBtn').focus();
   });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && ov.classList.contains('open')) document.getElementById('breatheClose').click(); });
 
-  document.getElementById('bloom').addEventListener('click', () => bloom(16));
+  /* Starfield */
+  const cv = document.getElementById('bg'), cx = cv.getContext('2d');
+  function paint() {
+    const d = Math.min(devicePixelRatio || 1, 2), w = innerWidth, h = innerHeight;
+    cv.width = Math.round(w * d); cv.height = Math.round(h * d);
+    cx.setTransform(d, 0, 0, d, 0, 0);
+    let seed = 1511;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const n = Math.round(w * h / 6500);
+    for (let i = 0; i < n; i++) {
+      cx.globalAlpha = 0.25 + rnd() * 0.6;
+      cx.fillStyle = rnd() < .2 ? '#FFD9A0' : '#EDEBFF';
+      cx.beginPath(); cx.arc(rnd() * w, rnd() * h, 0.3 + rnd() * 1.1, 0, 6.2832); cx.fill();
+    }
+  }
+  let lw = 0;
+  addEventListener('resize', () => { if (innerWidth !== lw) { lw = innerWidth; paint(); } });
+  lw = innerWidth; paint();
 })();
 </script>
 </body>
