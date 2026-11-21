@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Princess Day, Arpita</title>
+<title>Call me, Arpita</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: light;
-    --bg1: #FFE3F0; --bg2: #EADFFF;
-    --ink: #5B2A5E; --soft: #8A5C8D;
-    --pink: #FF8FBA; --pink-d: #E0457E; --lilac: #CDB7FF; --mint: #BFF0DF; --butter: #FFEFA8; --peach: #FFD9C7;
-    --card: #FFFFFF; --line: #F3C4DB; --gold: #F2B632;
-    --focus: #5B2A5E;
+    --bg1: #DDF1FF; --bg2: #FFE6EE;
+    --ink: #2D3A66; --soft: #5F6E9C;
+    --blue: #7CC4F5; --blue-d: #2F86C9; --pink: #FF8FAF; --pink-d: #D6457A; --butter: #FFF0B0; --mint: #C4F2E2; --peach: #FFDCC9; --lilac: #DCCBFF;
+    --card: #FFFFFF; --line: #BFDDF5; --green: #35B37E;
+    --focus: #2D3A66;
     --display: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
     --body: "Nunito", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
     --hand: "Caveat", "Comic Sans MS", cursive;
@@ -25,88 +25,98 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       color-scheme: dark;
-      --bg1: #2A1436; --bg2: #3B2358; --ink: #FFEAF4; --soft: #D9BFE6;
-      --pink: #FF8FBA; --pink-d: #FF8FBA; --card: #3A2250; --line: #6A4586;
-      --butter: #5A4A1E; --mint: #1F4F46; --peach: #5A3A3A; --lilac: #5A4690; --focus: #FFEAF4;
+      --bg1: #14213D; --bg2: #3A1F3F; --ink: #EAF3FF; --soft: #B6C6E8;
+      --blue-d: #7CC4F5; --pink-d: #FF8FAF; --card: #1F3059; --line: #3E5A93;
+      --butter: #5A4F22; --mint: #1F4F46; --peach: #5A3A3A; --lilac: #4C3F7E; --focus: #EAF3FF;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --bg1: #2A1436; --bg2: #3B2358; --ink: #FFEAF4; --soft: #D9BFE6;
-    --pink: #FF8FBA; --pink-d: #FF8FBA; --card: #3A2250; --line: #6A4586;
-    --butter: #5A4A1E; --mint: #1F4F46; --peach: #5A3A3A; --lilac: #5A4690; --focus: #FFEAF4;
+    --bg1: #14213D; --bg2: #3A1F3F; --ink: #EAF3FF; --soft: #B6C6E8;
+    --blue-d: #7CC4F5; --pink-d: #FF8FAF; --card: #1F3059; --line: #3E5A93;
+    --butter: #5A4F22; --mint: #1F4F46; --peach: #5A3A3A; --lilac: #4C3F7E; --focus: #EAF3FF;
   }
   *, *::before, *::after { box-sizing: inherit; }
   html { background: var(--bg1); scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body { margin: 0; color: var(--ink); font-family: var(--body); font-size: 1.1rem; line-height: 1.7; overflow-x: hidden;
-    background: radial-gradient(circle at 12% 8%, rgba(255,255,255,.55) 0 3px, transparent 4px) 0 0/46px 46px, linear-gradient(var(--bg1), var(--bg2)) fixed; }
+    background: radial-gradient(circle at 10% 10%, rgba(255,255,255,.6) 0 3px, transparent 4px) 0 0/48px 48px, linear-gradient(var(--bg1), var(--bg2)) fixed; }
   :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
   .fl { position: fixed; bottom: -30px; z-index: 40; pointer-events: none; font-size: 1.7rem; animation: up 4.5s ease-out forwards; }
   @keyframes up { to { transform: translateY(-110vh) rotate(18deg); opacity: 0; } }
 
-  /* Hero */
   .hero { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 36px 20px 56px; }
-  .bubble { position: relative; max-width: 19rem; min-height: 3.6rem; display: grid; place-items: center; margin: 0 0 18px; padding: .7rem 1.1rem; background: var(--card); border: 3px solid var(--pink); border-radius: 22px; font-family: var(--hand); font-weight: 700; font-size: 1.55rem; line-height: 1.2; }
-  .bubble::after { content: ""; position: absolute; left: 50%; bottom: -14px; width: 20px; height: 20px; margin-left: -10px; background: var(--card); border-right: 3px solid var(--pink); border-bottom: 3px solid var(--pink); transform: rotate(45deg); }
-  .pal { appearance: none; background: none; border: 0; padding: 0; cursor: pointer; width: min(58vw, 230px); border-radius: 50%; -webkit-tap-highlight-color: transparent; }
-  .pal svg { display: block; width: 100%; height: auto; overflow: visible; animation: bounce 2.4s ease-in-out infinite; transform-origin: 50% 100%; }
-  @keyframes bounce { 0%,100% { transform: scale(1,1); } 50% { transform: scale(1.04,.96) translateY(-6px); } }
-  .pal:active svg { transform: scale(.94); }
-  .eyes-happy { display: none; }
-  .pal.happy .eyes-open { display: none; }
-  .pal.happy .eyes-happy { display: block; }
-  .blink { animation: blink 4s infinite; transform-box: fill-box; transform-origin: center; }
-  @keyframes blink { 0%,94%,100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
-  .eyebrow { margin: 1.4rem 0 0; font-family: var(--hand); font-size: 1.6rem; color: var(--pink-d); }
-  h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(2.2rem, 9.5vw, 4rem); line-height: 1.1; text-wrap: balance; }
-  h1 span { color: var(--pink-d); }
-  .sub { margin: .7rem auto 1.2rem; max-width: 26rem; color: var(--soft); font-size: 1.2rem; }
-  .cue { display: inline-block; font-family: var(--display); font-weight: 600; padding: .55em 1.2em; border-radius: 999px; background: var(--pink); color: #4B1235; text-decoration: none; box-shadow: 0 4px 0 var(--pink-d); }
+  .bubble { position: relative; max-width: 20rem; padding: .6rem 1.1rem; margin: 0 0 20px; background: var(--card); border: 3px solid var(--blue); border-radius: 22px; font-family: var(--hand); font-weight: 700; font-size: 1.6rem; line-height: 1.2; }
+  .bubble::after { content: ""; position: absolute; left: 50%; bottom: -14px; width: 20px; height: 20px; margin-left: -10px; background: var(--card); border-right: 3px solid var(--blue); border-bottom: 3px solid var(--blue); transform: rotate(45deg); }
+  .phone-btn { appearance: none; background: none; border: 0; padding: 0; cursor: pointer; width: min(46vw, 180px); -webkit-tap-highlight-color: transparent; }
+  .phone-btn svg { display: block; width: 100%; height: auto; overflow: visible; animation: ring 3s ease-in-out infinite; transform-origin: 50% 90%; }
+  @keyframes ring { 0%,55%,100% { transform: rotate(0); } 60% { transform: rotate(-7deg); } 66% { transform: rotate(7deg); } 72% { transform: rotate(-6deg); } 78% { transform: rotate(5deg); } 84% { transform: rotate(0); } }
+  .waves { fill: none; stroke: var(--blue-d); stroke-width: 5; stroke-linecap: round; animation: wv 3s infinite; }
+  @keyframes wv { 0%,50% { opacity: 0; } 62% { opacity: 1; } 90%,100% { opacity: 0; } }
+  .eyebrow { margin: 1.3rem 0 0; font-family: var(--hand); font-size: 1.6rem; color: var(--pink-d); }
+  h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 9vw, 3.8rem); line-height: 1.1; text-wrap: balance; }
+  h1 span { color: var(--blue-d); }
+  .sub { margin: .7rem auto 1.3rem; max-width: 26rem; color: var(--soft); font-size: 1.2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn { display: inline-block; appearance: none; font: inherit; font-family: var(--display); font-weight: 600; font-size: 1.1rem; padding: .7em 1.4em; border: 0; border-radius: 999px; cursor: pointer; text-decoration: none; background: var(--blue); color: #0E2744; box-shadow: 0 4px 0 var(--blue-d); }
+  .btn.wa { background: #8FE3B5; color: #0B3A22; box-shadow: 0 4px 0 var(--green); }
+  .btn.pk { background: var(--pink); color: #4B1235; box-shadow: 0 4px 0 var(--pink-d); }
+  .contact { display: flex; align-items: center; gap: 12px; margin: 0 auto 1.3rem; padding: .6rem .9rem; max-width: 20rem; text-align: left; background: var(--card); border: 3px solid var(--line); border-radius: 999px; }
+  .contact .av { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--peach); font-size: 1.6rem; }
+  .contact .cn { flex: 1; line-height: 1.25; }
+  .contact b { display: block; font-family: var(--display); font-weight: 600; font-size: 1.2rem; }
+  .contact i { font-style: normal; font-size: .85rem; color: var(--soft); }
+  .contact .cg { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--green); font-size: 1.2rem; }
+  .tmsg { min-height: 1.7em; margin: 1rem 0 0; font-family: var(--hand); font-weight: 700; font-size: 1.5rem; line-height: 1.3; color: var(--pink-d); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.25); }
 
   .section { padding: clamp(48px, 8vw, 84px) 20px; }
   .inner { max-width: 34rem; margin: 0 auto; }
   h2 { margin: 0 0 1rem; font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1.2; text-align: center; text-wrap: balance; }
 
-  /* Report */
-  .report { background: var(--card); border: 3px solid var(--line); border-radius: 26px; padding: 1.4rem 1.3rem; }
-  .row { margin: 0 0 1.1rem; }
-  .row:last-child { margin: 0; }
-  .row b { display: flex; justify-content: space-between; gap: 10px; font-family: var(--display); font-weight: 600; }
-  .row i { font-style: normal; color: var(--pink-d); }
-  .bar { height: 16px; margin-top: .3rem; border-radius: 99px; background: var(--bg2); overflow: hidden; border: 2px solid var(--line); }
-  .bar span { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--pink), var(--gold)); transition: width 1.6s cubic-bezier(.16,1,.3,1); }
-  .bar span.lo { background: var(--mint); }
-  .seen .bar span { width: var(--w); }
+  .letter { background: var(--card); border: 3px solid var(--line); border-radius: 28px; padding: 1.7rem 1.5rem; }
+  .letter .hi { font-family: var(--hand); font-weight: 700; font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; color: var(--pink-d); }
+  .letter p { margin: 0 0 1em; }
+  .letter p:last-child { margin: 0; }
 
-  /* Poems */
-  .poems { display: grid; gap: 20px; }
-  .poem { margin: 0; padding: 1.4rem 1.3rem; text-align: center; font-family: var(--hand); font-weight: 700; font-size: clamp(1.45rem, 5.4vw, 1.8rem); line-height: 1.35; border-radius: 26px; border: 3px dashed var(--pink); background: var(--butter); color: #4B2250; }
-  :root[data-theme="dark"] .poem { color: #FFEAF4; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .poem { color: #FFEAF4; } }
-  .poem:nth-child(2) { background: var(--mint); border-color: #5CCBA9; transform: rotate(-1.2deg); }
-  .poem span { display: block; }
+  .status { background: var(--card); border: 3px solid var(--blue); border-radius: 28px; padding: 1.5rem 1.4rem; }
+  .status .chips { display: grid; gap: 10px; margin: 0 0 1.1rem; }
+  .status .chip { display: flex; gap: 12px; align-items: center; padding: .6rem .9rem; border-radius: 16px; background: var(--bg1); font-family: var(--display); font-weight: 600; line-height: 1.3; }
+  .status .chip span:first-child { font-size: 1.6rem; }
+  .status .chip.ok { background: var(--mint); color: #0B3A22; }
+  :root[data-theme="dark"] .status .chip.ok { color: #D6FFEE; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status .chip.ok { color: #D6FFEE; } }
+  .status p { margin: 0 0 .9em; }
+  .status p:last-child { margin: 0; }
 
-  /* Coupons */
-  .coupons { display: grid; gap: 14px; }
-  .cp { position: relative; text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--card); border: 3px dashed var(--lilac); border-radius: 20px; padding: 1rem 1.1rem 1rem 4rem; }
-  .cp:nth-child(odd) { transform: rotate(-.8deg); }
-  .cp:nth-child(even) { transform: rotate(.8deg); }
-  .cp::before { content: attr(data-e); position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 2rem; }
-  .cp b { display: block; font-family: var(--display); font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
-  .cp em { font-style: normal; color: var(--soft); font-size: .95rem; }
-  .cp .st { display: none; position: absolute; right: .8rem; top: .5rem; transform: rotate(10deg); font-family: var(--display); font-weight: 700; font-size: .95rem; color: var(--pink-d); border: 3px solid var(--pink-d); border-radius: 10px; padding: 0 .5rem; background: var(--card); }
-  .cp.done { opacity: .75; border-style: solid; border-color: var(--pink); }
-  .cp.done .st { display: block; }
-  .cnote { margin: 1rem 0 0; text-align: center; color: var(--soft); font-style: italic; min-height: 1.7em; }
+  .ticket { position: relative; text-align: center; background: var(--butter); border: 3px dashed var(--pink); border-radius: 22px; padding: 1.6rem 1.2rem; transform: rotate(-1.2deg); }
+  .ticket small { display: block; font-family: var(--display); letter-spacing: .2em; color: var(--pink-d); font-size: .8rem; }
+  .ticket .t { margin: .3rem 0; font-family: var(--display); font-weight: 700; font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1.2; color: #3A2A55; }
+  :root[data-theme="dark"] .ticket .t { color: #FFF3CC; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ticket .t { color: #FFF3CC; } }
+  .ticket p { margin: .3rem 0 0; font-family: var(--hand); font-weight: 700; font-size: 1.5rem; line-height: 1.3; }
+  .stamp { display: inline-block; margin-top: .8rem; padding: 0 .7rem; border: 3px solid var(--pink-d); border-radius: 10px; color: var(--pink-d); font-family: var(--display); font-weight: 700; transform: rotate(-6deg); }
+
+  .envs { display: grid; gap: 14px; }
+  .env > button { width: 100%; display: flex; align-items: center; gap: 14px; text-align: left; font: inherit; font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; background: var(--card); border: 3px solid var(--line); border-radius: 22px; padding: .9rem 1.1rem; }
+  .env > button .e { font-size: 1.8rem; transition: transform .3s; }
+  .env > button[aria-expanded="true"] { border-color: var(--pink); }
+  .env > button[aria-expanded="true"] .e { transform: rotate(-12deg) scale(1.15); }
+  .panel { margin-top: 10px; padding: 1.2rem 1.2rem; border-radius: 22px; background: var(--peach); color: #4A2540; animation: in .5s ease both; }
+  :root[data-theme="dark"] .panel { color: #FFEFF5; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .panel { color: #FFEFF5; } }
+  .env:nth-child(even) .panel { background: var(--mint); }
+  .panel[hidden] { display: none; }
+  .panel p { margin: 0 0 .8em; }
+  .panel p:last-child { margin: 0; }
+  .panel .sh { font-family: var(--hand); font-weight: 700; font-size: 1.5rem; line-height: 1.35; }
+  .panel .sh span { display: block; }
+  @keyframes in { from { opacity: 0; transform: translateY(8px); } }
 
   .finale { text-align: center; }
-  .note { background: var(--card); border: 3px solid var(--line); border-radius: 28px; padding: 1.6rem 1.4rem; }
-  .note p { margin: 0 0 1em; font-size: 1.2rem; }
-  .sign { font-family: var(--hand); font-size: 1.7rem !important; color: var(--pink-d); margin: 0 !important; line-height: 1.2; }
-  .sign strong { display: block; font-size: 2.2rem; color: var(--ink); }
-  .btn { appearance: none; font: inherit; font-family: var(--display); font-weight: 600; padding: .65em 1.4em; border: 0; border-radius: 999px; background: var(--pink); color: #4B1235; cursor: pointer; margin-top: 1.4rem; box-shadow: 0 4px 0 var(--pink-d); }
-  .btn:active, .cue:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--pink-d); }
+  .finale p { margin: 0 0 1em; font-size: 1.25rem; }
+  .sign { font-family: var(--hand); font-size: 1.7rem !important; color: var(--pink-d); margin: 1.4rem 0 0 !important; line-height: 1.2; }
+  .sign strong { display: block; font-size: 2.3rem; color: var(--ink); }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
@@ -115,83 +125,125 @@
 </head>
 <body>
 <header class="hero">
-  <div class="bubble" id="bubble" aria-live="polite">Hi Princess <span data-to>Arpita</span>! Tap me!</div>
-  <button class="pal" id="pal" type="button" aria-label="Tap the little princess">
-    <svg viewBox="0 0 200 220" aria-hidden="true" focusable="false">
-      <ellipse cx="100" cy="212" rx="52" ry="7" fill="#000" opacity=".08"/>
-      <circle cx="46" cy="64" r="22" fill="#6B3A4E"/><circle cx="154" cy="64" r="22" fill="#6B3A4E"/>
-      <circle cx="46" cy="64" r="8" fill="#FF8FBA"/><circle cx="154" cy="64" r="8" fill="#FF8FBA"/>
-      <path d="M50 190c0-30 22-44 50-44s50 14 50 44c0 10-14 16-50 16s-50-6-50-16z" fill="#FF8FBA"/>
-      <circle cx="100" cy="102" r="70" fill="#FFE3D3"/>
-      <path d="M32 96c4-40 34-62 68-62s64 22 68 62c-18-12-40-22-68-22s-50 10-68 22z" fill="#6B3A4E"/>
-      <path d="M64 40l-8-26 22 14 22-22 22 22 22-14-8 26z" fill="#F2B632" stroke="#C98E16" stroke-width="3" stroke-linejoin="round"/>
-      <circle cx="100" cy="20" r="5" fill="#FF8FBA"/>
-      <g class="eyes-open blink"><ellipse cx="76" cy="108" rx="9" ry="12" fill="#3A1B3C"/><ellipse cx="124" cy="108" rx="9" ry="12" fill="#3A1B3C"/><circle cx="79" cy="103" r="3.5" fill="#fff"/><circle cx="127" cy="103" r="3.5" fill="#fff"/></g>
-      <g class="eyes-happy" fill="none" stroke="#3A1B3C" stroke-width="5" stroke-linecap="round"><path d="M66 112q10-14 20 0"/><path d="M114 112q10-14 20 0"/></g>
-      <ellipse cx="58" cy="128" rx="11" ry="7" fill="#FF8FBA" opacity=".6"/><ellipse cx="142" cy="128" rx="11" ry="7" fill="#FF8FBA" opacity=".6"/>
-      <path d="M88 130q12 12 24 0" fill="#C9366B" stroke="#3A1B3C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <div class="bubble">Feeling sad? Ring ring! 📞</div>
+  <button class="phone-btn" id="phoneBtn" type="button" aria-label="Send some hearts">
+    <svg viewBox="0 0 160 220" aria-hidden="true" focusable="false">
+      <g class="waves"><path d="M24 40q-14 18 0 40"/><path d="M10 30q-26 30 0 60"/><path d="M136 40q14 18 0 40"/><path d="M150 30q26 30 0 60"/></g>
+      <rect x="30" y="20" width="100" height="180" rx="26" fill="#FF8FAF" stroke="#D6457A" stroke-width="5"/>
+      <rect x="42" y="44" width="76" height="120" rx="14" fill="#FFF6FA"/>
+      <circle cx="64" cy="92" r="7" fill="#2D3A66"/><circle cx="96" cy="92" r="7" fill="#2D3A66"/>
+      <circle cx="66" cy="89" r="2.5" fill="#fff"/><circle cx="98" cy="89" r="2.5" fill="#fff"/>
+      <ellipse cx="54" cy="110" rx="8" ry="5" fill="#FF8FAF" opacity=".7"/><ellipse cx="106" cy="110" rx="8" ry="5" fill="#FF8FAF" opacity=".7"/>
+      <path d="M70 108q10 12 20 0" fill="none" stroke="#2D3A66" stroke-width="4" stroke-linecap="round"/>
+      <path d="M80 140c-14-9-18-16-12-22 4-4 9-2 12 3 3-5 8-7 12-3 6 6 2 13-12 22z" fill="#FF5C8A" transform="translate(0 6) scale(.9) translate(8 6)"/>
+      <circle cx="80" cy="182" r="7" fill="#fff" opacity=".8"/>
     </svg>
   </button>
-  <p class="eyebrow">Happy National Princess Day</p>
-  <h1>For the cutest <span data-nick>Khushi</span> ever</h1>
-  <p class="sub">No questions, no pressure. Just a little pocket of cuteness made for you, <span data-to>Arpita</span>.</p>
-  <a class="cue" href="#report">Open your surprise</a>
+  <p class="eyebrow">A little something for <span data-to>Arpita</span></p>
+  <h1>Sad day? <span>Call me.</span></h1>
+  <p class="sub">Any time, any reason, or no reason at all, <span data-nick>Khushi</span>. I’ll pick up, or call you right back.</p>
+  <div class="contact" aria-hidden="true"><span class="av">🐒</span><span class="cn"><b data-from>R 🐒</b><i>mobile · always picks up for you</i></span><span class="cg">📞</span></div>
+  <div class="actions">
+    <button class="btn pk" id="callA" type="button">📞 Want to call me?</button>
+  </div>
+  <p class="tmsg" aria-live="polite"></p>
 </header>
 
 <main>
-  <section class="section" id="report" aria-labelledby="rt">
+  <section class="section" aria-labelledby="lt">
     <div class="inner">
-      <h2 id="rt">Official Royal Cuteness Report</h2>
-      <div class="report" id="reportBox">
-        <div class="row"><b>Cuteness <i>1000%</i></b><div class="bar"><span style="--w:100%"></span></div></div>
-        <div class="row"><b>Smile power <i>Infinity</i></b><div class="bar"><span style="--w:100%"></span></div></div>
-        <div class="row"><b>Snack love <i>100%</i></b><div class="bar"><span style="--w:100%"></span></div></div>
-        <div class="row"><b>Best friend loyalty <i>24/7</i></b><div class="bar"><span style="--w:100%"></span></div></div>
-        <div class="row"><b>Overthinking allowed today <i>0%</i></b><div class="bar"><span class="lo" style="--w:3%"></span></div></div>
+      <h2 id="lt">A little note</h2>
+      <div class="letter">
+        <p class="hi">Dear <span data-to>Arpita</span> (my <span data-nick>Khushi</span>),</p>
+        <p>I’m really sorry we couldn’t meet. We had planned it, we were both looking forward to it, and then work called me away all of a sudden. I know how disappointing that is, because I felt it too. We live so close to each other, and still I couldn’t make it. That feels extra unfair.</p>
+        <p>The truth is, I don’t know exactly when I’ll be back next, and I hate that I can’t give you a date. But please remember one thing: our hangout is not cancelled. It’s only pending, and it’s the first thing on my list the moment I’m back. 💛</p>
+        <p>I also know you sometimes get sad, and being far away can make those days feel a little heavier. I don’t want you to carry that alone. So here’s my promise: whenever you feel low, for any reason or no reason at all, call me. You don’t have to explain anything, and you don’t have to be cheerful for me. Just call, and we’ll talk about everything, or nothing at all.</p>
+        <p>And if I ever go quiet or reply late, please don’t take it personally. It’s only because I’m buried in office work, never because you matter any less. You’re on my mind even on my busiest days.</p>
+        <p>You’re one of the kindest, funniest and most special people I know, and I’m so grateful to have you as a friend. Take care of yourself until we meet, and keep smiling for me. I’ll see you as soon as I can, I promise.</p>
+        <p class="hi">With all my love,<br><span data-from>R 🐒</span></p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="pt">
+  <section class="section" aria-labelledby="st">
     <div class="inner">
-      <h2 id="pt">Little lines, just for you</h2>
-      <div class="poems">
-        <blockquote class="poem">
-          <span>Din ho ya raat, waqt guzar hi jaata hai,</span>
-          <span>Har mod pe koi na koi mil hi jaata hai,</span>
-          <span>Par aapki hasi dekh dil khil khil jaata hai,</span>
-          <span>Aapki pyaari si baatein sunke chaand bhi muskuraata hai,</span>
-          <span>Aap toh meri duniya ki sabse cute princess kehlaati hain.</span>
-        </blockquote>
-        <blockquote class="poem">
-          <span>Aap hasti rahein, bas yahi dua hai meri,</span>
-          <span>Aapki muskaan hi toh meri Khushi hai.</span>
-        </blockquote>
+      <h2 id="st">If I’m slow to reply</h2>
+      <div class="status">
+        <div class="chips">
+          <div class="chip"><span aria-hidden="true">💼</span><span>Office day: messages may get late replies</span></div>
+          <div class="chip ok"><span aria-hidden="true">📞</span><span>Calls: always welcome, anytime</span></div>
+        </div>
+        <p>Some days I’ll be stuck at the office and might not reply to your messages right away. It never means I’m ignoring you, and it never means you don’t matter.</p>
+        <p>If you want to talk, just call me directly, anytime. If I can’t pick up, I’ll call you back the moment I’m free. 💛</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="ct">
+  <section class="section" aria-labelledby="tt">
     <div class="inner">
-      <h2 id="ct">Princess coupons</h2>
-      <div class="coupons" id="coupons">
-        <button class="cp" type="button" data-e="🍫"><b>1 treat of your choice</b><em>Tap to redeem, then show it to your friend</em><span class="st">REDEEMED</span></button>
-        <button class="cp" type="button" data-e="🗣️"><b>1 no-judgement talk session</b><em>You talk, I only listen</em><span class="st">REDEEMED</span></button>
-        <button class="cp" type="button" data-e="😂"><b>1 meme delivery, any time</b><em>Fresh and handpicked</em><span class="st">REDEEMED</span></button>
-        <button class="cp" type="button" data-e="🤗"><b>1 big, long hug</b><em>Valid whenever you need it</em><span class="st">REDEEMED</span></button>
+      <h2 id="tt">Our pending hangout</h2>
+      <div class="ticket">
+        <small>ADMIT ONE · BEST FRIEND EDITION</small>
+        <p class="t">Hangout with <span data-from>Rishab</span></p>
+        <p>Date: to be announced (soon!)<br>Valid: forever, no expiry</p>
+        <span class="stamp">PENDING</span>
       </div>
-      <p class="cnote" id="cnote" aria-live="polite">Tap a coupon to redeem it.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="et">
+    <div class="inner">
+      <h2 id="et">Open when…</h2>
+      <div class="envs" id="envs">
+        <div class="env">
+          <button type="button" aria-expanded="false"><span class="e" aria-hidden="true">💌</span>Open when you’re sad</button>
+          <div class="panel" hidden>
+            <p class="sh">
+              <span>Dooriyan dosti ko kab kam kar paati hain,</span>
+              <span>Mulaqatein na hon, par yaadein toh aati hain,</span>
+              <span>Jab bhi udaasi aapko gher jaati hai,</span>
+              <span>Ek call kar dena, meri duniya wahin ruk jaati hai,</span>
+              <span>Aapki ek awaaz se meri saari thakaan chali jaati hai.</span>
+            </p>
+            <p>And I mean it. Call me. 📞</p>
+          </div>
+        </div>
+        <div class="env">
+          <button type="button" aria-expanded="false"><span class="e" aria-hidden="true">💗</span>Open when you miss me</button>
+          <div class="panel" hidden>
+            <p>I miss you too, probably more than I show. Send me a voice note or a random meme, and I’ll reply the moment I’m free.</p>
+            <p class="sh">
+              <span>Milna na ho paaye toh kya hua, dil toh paas hai,</span>
+              <span>Aapki har baat mere liye khaas hai.</span>
+            </p>
+          </div>
+        </div>
+        <div class="env">
+          <button type="button" aria-expanded="false"><span class="e" aria-hidden="true">🌧️</span>Open when you’re stressed</button>
+          <div class="panel" hidden>
+            <p>Take a slow, deep breath. You’ve handled so much already, and I’m proud of you. One thing at a time, Princess.</p>
+          </div>
+        </div>
+        <div class="env">
+          <button type="button" aria-expanded="false"><span class="e" aria-hidden="true">🌙</span>Open when you can’t sleep</button>
+          <div class="panel" hidden>
+            <p>Think about the day we finally meet and all the silly plans we’ll make. Sweet dreams, <span data-nick>Khushi</span>. 🌙</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section finale" aria-labelledby="ft">
     <div class="inner">
-      <h2 id="ft">One more thing, Princess</h2>
-      <div class="note">
-        <p>Some days feel heavier than others, and that’s totally okay. You don’t have to be strong for anyone today. Just remember that you’re so loved, you’re so special, and I’m always one message away.</p>
-        <p class="sign">With all the love,<strong data-from>Your Bestie</strong></p>
+      <h2 id="ft">Remember this</h2>
+      <p>You’re never alone, even when we’re far apart. One call, and I’m right there with you.</p>
+      <div class="actions">
+        <button class="btn pk" id="callB" type="button">📞 Want to call me?</button>
+        <button class="btn" id="hearts" type="button">Send hearts 💗</button>
       </div>
-      <button class="btn" id="hearts" type="button">Send me hearts</button>
+      <p class="tmsg" aria-live="polite"></p>
+      <p class="sign">Always yours, as a friend,<strong data-from>Rishab</strong></p>
     </div>
   </section>
 </main>
@@ -199,15 +251,16 @@
 <script>
 (() => {
   // Names: change these here
-  const TO_NAME = "Arpita", NICK = "Khushi", FROM_NAME = "Rishab";
+  const TO_NAME = "Arpita", NICK = "Khushi", FROM_NAME = "R 🐒"; // how she saves you in her phone
 
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('[data-to]').forEach(e => e.textContent = TO_NAME);
   document.querySelectorAll('[data-nick]').forEach(e => e.textContent = NICK);
   document.querySelectorAll('[data-from]').forEach(e => e.textContent = FROM_NAME);
-  document.title = `Happy Princess Day, ${TO_NAME}`;
+  document.title = `Call me, ${TO_NAME}`;
 
-  const em = ['💗', '🌸', '✨', '🎀', '💖', '🦄'];
+
+  const em = ['💗', '🌸', '✨', '🎀', '💙', '🦋'];
   function hearts(n) {
     if (reduce) return;
     for (let i = 0; i < n; i++) {
@@ -222,38 +275,20 @@
       setTimeout(() => s.remove(), 6500);
     }
   }
-
-  const lines = [
-    `Yay! Hi Princess ${TO_NAME}! 👑`,
-    'You’re the cutest person I know.',
-    'Sending you a very big virtual hug 🤗',
-    'Snack break? I’m always in 🍫',
-    'No overthinking allowed today!',
-    'You’re loved. Like, really a lot.',
-    'Smile for me? Pretty please 🥹'
-  ];
-  let li = -1, t = null;
-  const pal = document.getElementById('pal'), bubble = document.getElementById('bubble');
-  pal.addEventListener('click', () => {
-    li = (li + 1) % lines.length;
-    bubble.textContent = lines[li];
-    pal.classList.add('happy');
-    clearTimeout(t); t = setTimeout(() => pal.classList.remove('happy'), 1800);
-    hearts(6);
-  });
-
-  const box = document.getElementById('reportBox');
-  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { box.classList.add('seen'); o.disconnect(); } }), { threshold: .3 }).observe(box);
-
-  const cps = [...document.querySelectorAll('.cp')], cn = document.getElementById('cnote');
-  cps.forEach(c => c.addEventListener('click', () => {
-    c.classList.toggle('done');
-    const n = cps.filter(x => x.classList.contains('done')).length;
-    cn.textContent = n === cps.length ? 'All redeemed! You officially own the best friend. 💗' : n ? `${n} of ${cps.length} redeemed. Yay!` : 'Tap a coupon to redeem it.';
-    if (c.classList.contains('done')) hearts(8);
+  document.getElementById('phoneBtn').addEventListener('click', () => hearts(8));
+  document.querySelectorAll('#callA, #callB').forEach(b => b.addEventListener('click', () => {
+    const m = b.closest('header, section').querySelector('.tmsg');
+    m.textContent = `Just open your phone and call “${FROM_NAME}”, anytime. I’ll be waiting! 💗`;
+    hearts(10);
   }));
-
   document.getElementById('hearts').addEventListener('click', () => hearts(22));
+
+  document.querySelectorAll('#envs .env > button').forEach(b => b.addEventListener('click', () => {
+    const p = b.nextElementSibling, open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', String(!open));
+    p.hidden = open;
+    if (!open) hearts(5);
+  }));
 })();
 </script>
 </body>
